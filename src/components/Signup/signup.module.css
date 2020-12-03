@@ -1,0 +1,123 @@
+.container {
+	width: 85rem;
+	height: 45rem;
+	margin: 6rem auto;
+	display: flex;
+	flex-direction: row;
+	background-color: var(--mainWhite);
+}
+
+.left {
+	background-color: var(--mainBlue);
+	width: 50%;
+	position: relative;
+}
+
+.left img {
+	width: 15rem;
+	height: auto;
+	float: left;
+	margin: 5rem 0 0 9rem;
+}
+
+.btn {
+	position: absolute;
+	margin-right: 0;
+	font-size: 1.5rem;
+	color: var(--mainWhite);
+	padding: 1rem 2rem;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.btnSignUp {
+	background-color: var(--mainWhite);
+	color: var(--mainBlue);
+	top: 35%;
+	right: 0%;
+}
+.btnLogIn {
+	top: 44.5%;
+	right: 0%;
+}
+
+.right {
+	text-align: center;
+	margin: 3rem auto;
+}
+
+.right h3 {
+	font-size: 2rem;
+	margin: 3rem auto;
+	word-spacing: 0.5rem;
+	color: var(--mainBlue);
+	text-transform: uppercase;
+}
+
+.right h3:after {
+	content: " ";
+	display: block;
+	width: 5rem;
+	margin: 2rem auto;
+	height: 0.2rem;
+	background-color: var(--mainBlue);
+}
+
+.formCover {
+	width: 100%;
+	margin: 5rem auto 2rem auto;
+	display: flex;
+	flex-direction: row;
+}
+.formCover .icons {
+	width: 10%;
+}
+.formCover .icons,
+.formCover form {
+	display: flex;
+	flex-direction: column;
+}
+.formCover .icons ion-icon {
+	font-size: 2rem;
+	padding: 0.5rem;
+	margin-bottom: 1.5rem;
+}
+.formCover form {
+	width: 100%;
+}
+.formCover input {
+	margin-bottom: 1rem;
+	padding: 1rem;
+	width: 100%;
+	border: 1px solid var(--mainBlue);
+}
+
+.right .formCover input:focus {
+	border-bottom: 4px solid var(--mainBlue);
+}
+
+::placeholder {
+	font-size: 1.5rem;
+	color: var(--mainBlue);
+}
+
+.submit {
+	margin-top: 1.5rem;
+	background-color: var(--mainBlue);
+	color: var(--mainWhite);
+	border-bottom: none;
+	padding: 1rem 2rem;
+	text-align: center;
+	text-decoration: none;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+}
+
+/*
+<ion-icon name="person-outline" className={styles.outline}></ion-icon>
+<ion-icon name="mail-outline" className={styles.outline}></ion-icon>
+<ion-icon name="call-outline" className={styles.outline}></ion-icon>
+<ion-icon name="body-outline" className={styles.outline}></ion-icon>
+<ion-icon name="key-outline" className={styles.outline}></ion-icon>
+*/

@@ -1,0 +1,96 @@
+.container {
+	background-color: var(--mainWhite);
+	width: 100%;
+	height: 6rem;
+}
+
+.cover {
+	width: 114rem;
+	margin: 0 auto;
+}
+
+.logo {
+	float: left;
+	height: 4rem;
+	width: auto;
+	margin-top: 0.8rem;
+}
+
+.navList {
+	float: right;
+	list-style-type: none;
+	margin-top: 1.7rem;
+	font-size: 1.2rem;
+	vertical-align: center;
+}
+
+.navLink,
+.btn {
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+.navLink a:link,
+.navLink a:visited,
+.btn:link,
+.btn:visited {
+	text-decoration: none;
+	color: var(--mainBlack);
+	border-bottom: 2px solid transparent;
+	transition: border-bottom 0.5s;
+}
+
+.navLink a{
+	margin-right: 3rem;
+	padding-bottom: 0.7rem;
+}
+
+/*.navLink:nth-child(3) {
+	margin-right: 5rem;
+}*/
+
+.navLink a:hover,
+.navLink a:active {
+	border-bottom: 2px solid var(--mainBlue);
+}
+
+.btn{
+	margin-right: 2rem;
+	padding: 0.5rem;
+	border-radius: 1rem;
+	font-size: 1.2rem;
+}
+
+.btnGreen:link,
+.btnGreen:visited {
+	color: var(--mainGreen);
+	border: 1px solid var(--mainGreen);
+}
+
+.btnRed:link,
+.btnRed:visited {
+	color: var(--mainRed);
+	border: 1px solid var(--mainRed);
+	transition: color 0.2s, background-color 0.2s;
+}
+
+.btnGreen:active,
+.btnGreen:hover {
+	color: var(--mainWhite);
+	background-color: var(--mainGreen);
+	transition: color 0.2s, background-color 0.2s;
+}
+
+.btnRed:active,
+.btnRed:hover {
+	color: var(--mainWhite);
+	background-color: var(--mainRed);
+}
+
+@media screen and (max-width: 767px) {
+	.cover {
+		width: 100rem;
+	}
+}
+
+

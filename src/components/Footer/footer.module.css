@@ -1,0 +1,92 @@
+.container {
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	background-color: var(--mainBlack);
+	left: 0;
+}
+
+.cover {
+	width: 70rem;
+	margin: 0 auto;
+	display: flex;
+	padding: 2rem;
+	flex-direction: column;
+	text-align: center;
+}
+
+.contact {
+	margin-bottom: 1.5rem;
+	font-size: 2rem;
+	color: var(--mainWhite);
+	text-transform: uppercase;
+	word-spacing: 0.5rem;
+}
+
+.contact:after {
+	display: block;
+	margin: 2rem auto 0 auto;
+	content: " ";
+	width: 5rem;
+	height: 0.2rem;
+	background-color: var(--mainBlue);
+	clear: both;
+}
+
+.icons {
+	display: flex;
+	margin: 0 auto;
+	width: 20%;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
+	font-size: 2rem;
+	margin-bottom: 3rem;
+}
+
+ion-icon:first-child,
+ion-icon:nth-child(2),
+ion-icon:nth-child(3),
+ion-icon:nth-child(4) {
+	color: var(--mainWhite);
+}
+
+ion-icon:first-child:hover {
+	color: rgb(59,89,153);
+}
+
+ion-icon:nth-child(2):hover {
+	color: rgb(221,75,57);
+}
+
+ion-icon:nth-child(3):hover {
+	color: rgb(228,64,95);
+}
+
+ion-icon:nth-child(4):hover {
+	color: rgb(255,255,255);
+}
+
+.copyright {
+	font-size: 1.2rem;
+	color: var(--mainWhite);
+}
+
+@media screen and (max-width: 767px) {
+	.cover {
+		width: 50rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.cover {
+		width: 30rem;
+	}
+	.icons {
+		width: 40%;
+		font-size: 1.5rem;
+	}
+	.contact {
+		font-size: 1.3rem;
+	}
+}
