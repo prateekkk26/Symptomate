@@ -1,0 +1,51 @@
+.container {
+	padding: 2rem;
+}
+
+.cover {
+	max-width: 114rem;
+	margin: 5rem auto;
+	text-align: center;
+	background-image: linear-gradient(rgba(255,255,255,0.8), rgba(0,0,0,0.8)), url('../../img/error.webp');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	padding: 4rem;
+	box-shadow: 1rem 2rem 0.5rem var(--mainBlack);
+}
+
+.cover h1 {
+	font-size: 13rem;
+}
+
+.cover h3 {
+	font-size: 8rem;
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+	.cover h1 {
+		font-size: 11rem;
+	}
+	.cover h3 {
+		font-size: 6rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.cover h1 {
+		font-size: 9rem;
+	}
+	.cover h3 {
+		font-size: 4rem;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	.cover h1 {
+		font-size: 5rem;
+	}
+	.cover h3 {
+		font-size: 3rem;
+	}
+}

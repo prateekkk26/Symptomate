@@ -36,14 +36,20 @@ class Countries extends Component {
 			            title:{
 			              display:false,
 			              text:'Health care index of countries',
-			              fontSize:30
+			              fontSize:15
 			            },
+			            responsive: true,
 			            legend:{
 			              display:true,
 			              position:'top',
+			              fontSize: 8
 			            },
 			            label: {
 			            	fontColor: 'rgba(255,255,255,1)',
+			            },
+			            scales: {
+			            	yAxes: [{ticks: {fontSize: 10, fontColor: 'rgba(0,0,137,1'}}],
+			            	xAxes: [{ticks: {fontSize: 10, fontColor: 'rgba(0,0,137,1'}}],
 			            }
 			          }}
 			        />

@@ -3,19 +3,17 @@
 	width: 100%;
 	text-align: center;
 	background-color: var(--mainBlack);
-	left: 0;
 }
 
 .cover {
-	width: 70rem;
+	max-width: 100rem;
 	margin: 0 auto;
-	display: flex;
-	padding: 2rem;
-	flex-direction: column;
 	text-align: center;
+	padding: 2rem;
 }
 
-.contact {
+.cover h2 {
+	display: inline-block;
 	margin-bottom: 1.5rem;
 	font-size: 2rem;
 	color: var(--mainWhite);
@@ -23,7 +21,7 @@
 	word-spacing: 0.5rem;
 }
 
-.contact:after {
+.cover h2:after {
 	display: block;
 	margin: 2rem auto 0 auto;
 	content: " ";
@@ -67,7 +65,7 @@ ion-icon:nth-child(4):hover {
 	color: rgb(255,255,255);
 }
 
-.copyright {
+.cover p {
 	font-size: 1.2rem;
 	color: var(--mainWhite);
 }
@@ -76,17 +74,43 @@ ion-icon:nth-child(4):hover {
 	.cover {
 		width: 50rem;
 	}
+	.cover h2 {
+		font-size: 2rem;
+	}
 }
 
 @media screen and (max-width: 480px) {
 	.cover {
-		width: 30rem;
+		max-width: 30rem;
+		padding: 1rem;
+	}
+	.cover h2:after{
+		width: 3rem;
 	}
 	.icons {
 		width: 40%;
 		font-size: 1.5rem;
 	}
-	.contact {
-		font-size: 1.3rem;
+	.cover h2 {
+		font-size: 1.7rem;
+	}
+	.cover p {
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	.cover {
+		max-width: 20rem;
+	}
+	.cover h2 {
+		font-size: 1.2rem;
+	}
+	.icons {
+		width: 30%;
+		font-size: 1.2rem;
+	}
+	.cover p {
+		font-size: 0.8rem;
 	}
 }

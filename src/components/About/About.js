@@ -1,6 +1,16 @@
 import React from 'react'
 import styles from './about.module.css'
 
+import doctor1 from '../../img/doctor1.jpeg'
+import doctor2 from '../../img/doctor2.webp'
+import doctor3 from '../../img/doctor3.webp'
+import doctor4 from '../../img/doctor4.webp'
+import doctor5 from '../../img/doctor5.jpeg'
+import doctor6 from '../../img/doctor6.jpeg'
+import doctor7 from '../../img/doctor7.jpeg'
+import doctor8 from '../../img/doctor8.webp'
+
+
 const About = () => {
 	return (
 		<div className={styles.container} id="about">
@@ -14,44 +24,44 @@ const About = () => {
 				<ul className={styles.doctorShowcase}>
 					<li>
 						<figure className={styles.doctorPhoto}>
-							<img src="https://images.pexels.com/photos/4173239/pexels-photo-4173239.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="doctor-1" className={styles.item} />
+							<img src={doctor1} alt="doctor-1" className={styles.item} />
 						</figure>
 					</li>
 					<li>
 						<figure className={styles.doctorPhoto}>
-							<img src="https://cdn.pixabay.com/photo/2016/01/19/15/05/doctor-1149149__340.jpg" alt="doctor-2" className={styles.item} />
+							<img src={doctor2} alt="doctor-2" className={styles.item} />
 						</figure>
 					</li>
 					<li>
 						<figure className={styles.doctorPhoto}>
-							<img src="https://cdn.pixabay.com/photo/2017/03/14/03/20/nurse-2141808__340.jpg" alt="doctor-3" className={styles.item} />
+							<img src={doctor3} alt="doctor-3" className={styles.item} />
 						</figure>
 					</li>
 					<li>
 						<figure className={styles.doctorPhoto}>
-							<img src="https://cdn.pixabay.com/photo/2019/12/06/13/40/anesthesia-4677401__340.jpg" alt="doctor-4" className={styles.item} />
+							<img src={doctor4} alt="doctor-4" className={styles.item} />
 						</figure>
 					</li>
 				</ul>
 				<ul className={styles.doctorShowcase}>
 					<li>
 						<figure className={styles.doctorPhoto}>
-							<img src="https://images.pexels.com/photos/4173251/pexels-photo-4173251.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="doctor-5" className={styles.item} />
+							<img src={doctor5} alt="doctor-5" className={styles.item} />
 						</figure>
 					</li>
 					<li>
 						<figure className={styles.doctorPhoto}>
-							<img src="https://images.pexels.com/photos/3881247/pexels-photo-3881247.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="doctor-6" className={styles.item} />
+							<img src={doctor6} alt="doctor-6" className={styles.item} />
 						</figure>
 					</li>
 					<li>
 						<figure className={styles.doctorPhoto}>
-							<img src="https://images.pexels.com/photos/3938023/pexels-photo-3938023.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="doctor-7" className={styles.item} />
+							<img src={doctor7} alt="doctor-7" className={styles.item} />
 						</figure>
 					</li>
 					<li>
 						<figure className={styles.doctorPhoto}>
-							<img src="https://cdn.pixabay.com/photo/2020/11/02/19/52/doctor-5707722__340.jpg" alt="doctor-8" className={styles.item} />
+							<img src={doctor8} alt="doctor-8" className={styles.item} />
 						</figure>
 					</li>
 				</ul>

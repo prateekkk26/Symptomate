@@ -2,26 +2,25 @@
 	background-color: var(--mainWhite);
 	width: 100%;
 	height: 6rem;
+	padding: 1rem;
 }
 
 .cover {
-	width: 114rem;
+	max-width: 120rem;
 	margin: 0 auto;
 }
 
 .logo {
 	float: left;
-	height: 4rem;
-	width: auto;
-	margin-top: 0.8rem;
+	width: 9rem;
+	height: auto;
 }
 
 .navList {
 	float: right;
 	list-style-type: none;
-	margin-top: 1.7rem;
+	margin-top: 1rem;
 	font-size: 1.2rem;
-	vertical-align: center;
 }
 
 .navLink,
@@ -45,10 +44,6 @@
 	padding-bottom: 0.7rem;
 }
 
-/*.navLink:nth-child(3) {
-	margin-right: 5rem;
-}*/
-
 .navLink a:hover,
 .navLink a:active {
 	border-bottom: 2px solid var(--mainBlue);
@@ -58,7 +53,6 @@
 	margin-right: 2rem;
 	padding: 0.5rem;
 	border-radius: 1rem;
-	font-size: 1.2rem;
 }
 
 .btnGreen:link,
@@ -87,10 +81,98 @@
 	background-color: var(--mainRed);
 }
 
-@media screen and (max-width: 767px) {
+.toggle {
+	margin-right: 1.5rem;
+	font-size: 3rem;
+	display: none;
+}
+
+.block {
+	width: 100%;
+	background-color: var(--mainWhite);
+}
+
+.blockList {
+	margin: 0 auto;
+	text-align: center;
+	list-style-type: none;
+	font-size: 1.5rem;
+	padding: 1rem;
+}
+
+.blockLink {
+	padding: 1.5rem;
+}
+
+.blockLink:after {
+	content: " ";
+	display: block;
+	width: 25rem;
+	margin: 1rem auto 0 auto;
+	height: 0.1rem;
+	background-color: var(--mainBlue);
+}
+
+.blockLink:hover,
+.blockLink:active {
+	background-color: var(--lightGrey);
+}
+
+.blockLink:nth-child(3):hover,
+.blockLink:nth-child(3):active {
+	background-color: var(--mainGreen);
+}
+
+.blockLink:nth-child(4):hover,
+.blockLink:nth-child(4):active {
+	background-color: var(--mainRed);
+}
+
+.blockLink a:link,
+.blockLink a:visited,
+.blockBtn:link,
+.blockBtn:visited {
+	text-decoration: none;
+	transition: border-bottom 0.5s;
+	color: var(--mainBlue);
+	padding: 1rem;
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 770px) {
 	.cover {
-		width: 100rem;
+		max-width: 100rem;
+	}
+
+	.navList .navLink,
+	.btn {
+		display: none;
+	}
+	.toggle {
+		display: inline-block;
 	}
 }
+@media screen and (max-width: 480px) {
+	.cover {
+		max-width: 80rem;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+*/
 
 

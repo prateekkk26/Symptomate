@@ -1,7 +1,11 @@
+.pad{
+	padding: 4rem;
+}
+
 .container {
-	width: 85rem;
+	max-width: 85rem;
 	height: 45rem;
-	margin: 6rem auto;
+	margin: 0 auto;
 	display: flex;
 	flex-direction: row;
 	background-color: var(--mainWhite);
@@ -17,7 +21,10 @@
 	width: 15rem;
 	height: auto;
 	float: left;
-	margin: 5rem 0 0 9rem;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-80%, -50%);
 }
 
 .btn {
@@ -47,28 +54,30 @@
 	margin: 3rem auto;
 }
 
-.right h3 {
+.right h2 {
 	font-size: 2rem;
 	margin: 3rem auto;
 	word-spacing: 0.5rem;
 	color: var(--mainBlue);
 	text-transform: uppercase;
+	padding: 0.5rem;
 }
 
-.right h3:after {
+.right h2:after {
 	content: " ";
 	display: block;
 	width: 5rem;
-	margin: 2rem auto;
+	margin: 2rem auto 0 auto;
 	height: 0.2rem;
 	background-color: var(--mainBlue);
 }
 
 .formCover {
 	width: 100%;
-	margin: 5rem auto 2rem auto;
+	margin: 0 auto 2rem auto;
 	display: flex;
 	flex-direction: row;
+	padding: 1rem;
 }
 .formCover .icons {
 	width: 10%;
@@ -114,10 +123,82 @@
 	text-transform: uppercase;
 }
 
-/*
-<ion-icon name="person-outline" className={styles.outline}></ion-icon>
-<ion-icon name="mail-outline" className={styles.outline}></ion-icon>
-<ion-icon name="call-outline" className={styles.outline}></ion-icon>
-<ion-icon name="body-outline" className={styles.outline}></ion-icon>
-<ion-icon name="key-outline" className={styles.outline}></ion-icon>
-*/
+@media screen and (max-width: 660px) {
+	.right h2 {
+		font-size: 1.5rem;
+	}
+	.left img {
+		width: 10rem;
+	}
+	.btn {
+		font-size: 1.3rem;
+		padding: 1rem 1rem;
+	}
+	.submit {
+		font-size: 1.3rem;
+		padding: 1rem 1.5rem;
+	}
+	.formCover input {
+		padding: 0.7rem;
+	}
+	.formCover .icons ion-icon {
+		font-size: 1.5rem;
+	}
+	::placeholder {
+		font-size: 1.5rem
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.right h2 {
+		font-size: 1.2rem;
+	}
+	.right h2:after {
+		width: 3rem;
+	}
+	.left img {
+		width: 9rem;
+	}
+	.btn {
+		font-size: 1.1rem;
+		padding: 0.5rem 0.6rem;
+	}
+	.submit {
+		font-size: 1.1rem;
+		padding: 1rem 1.2rem;
+	}
+	.formCover input {
+		padding: 0.5rem;
+		width: 80%;
+		margin-left: 0.9rem;
+	}
+	.formCover .icons ion-icon {
+		font-size: 1.3rem;
+		padding: 0.3rem;
+	}
+	::placeholder {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.right h2 {
+		font-size: 1rem;
+	}
+	.left img {
+		width: 6rem;
+	}
+	.btn {
+		font-size: 0.9rem;
+		padding: 0.4rem 0.4rem;
+	}
+	.formCover input {
+		padding: 0.2rem;
+		width: 80%;
+		margin-left: 0.7rem;
+	}
+	::placeholder {
+		font-size: 0.8rem;
+	}
+}
+

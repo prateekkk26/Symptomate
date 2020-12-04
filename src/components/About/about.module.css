@@ -20,21 +20,24 @@
 .container p {
 	width: 80%;
 	margin: 2rem auto 4rem auto;
-	font-size: 1.7rem;
+	font-size: 1.6rem;
+	line-height: 1.8rem;
+	word-spacing: 0.4rem;
 }
 .doctors {
 	clear: both;
 	padding: 0;
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
 }
 .doctorShowcase {
 	list-style-type: none;
 	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 .doctorShowcase li {
-	display: block;
 	float: left;
 	width: 25%;
 }
@@ -55,4 +58,28 @@
 .doctorPhoto img:hover {
 	transform: scale(1.03);
 	opacity: 1;
+}
+
+@media screen and (max-width: 767px) {
+	.container h2 {
+		font-size: 2rem;
+	}
+	.container p {
+		font-size: 1.4rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.container h2 {
+		font-size: 1.7rem;
+	}
+	.container h2:after {
+		width: 3rem;
+	}
+}
+
+@media screen and (max-width: 300px) {
+	.container h2 {
+		font-size: 1.2rem;
+	}
 }
