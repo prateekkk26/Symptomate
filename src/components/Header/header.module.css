@@ -28,19 +28,26 @@
 	margin-bottom: 4.5rem;
 	color: var(--mainBlack);
 	animation: moveInLeft 1s ease-out;
+	text-transform: uppercase;
 }
 
 .btn {
 	font-size: 2rem;
-	padding: 1.5rem;
 	text-decoration: none;
-	border-radius: 2rem;
+	border-radius: 0.4rem;
+	text-transform: uppercase;
 } 
 
 .btnFull {
 	background-color: var(--mainBlue);
 	color: var(--mainWhite);
 	margin-right: 1.5rem;
+}
+
+.btnFull:hover,
+.btnFull:active {
+	color: var(--mainWhite);
+	opacity: 0.9;
 }
 
 .btnGhost {

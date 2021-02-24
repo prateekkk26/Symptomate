@@ -1,0 +1,17 @@
+.dashboard {
+	background-color: var(--lightGrey);
+	padding: 2rem;
+}
+
+.dashboardContainer {
+	max-width: 120rem;
+	margin: 3rem auto;
+	background-color: var(--mainWhite);
+	border-radius: 1rem;
+}
+
+.title {
+	max-width: 120rem;
+	font-size: 4rem;
+	margin: 1rem auto;
+}

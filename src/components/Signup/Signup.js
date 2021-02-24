@@ -1,36 +1,90 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React, {useState} from 'react'
+import {Redirect, Link} from 'react-router-dom'
+import {Form, InputGroup, FormControl, Button} from 'react-bootstrap'
+import fire from '../../config/firebase'
+import { signInWithGoogle} from '../../config/firebase';
 import styles from './signup.module.css'
 
 import Layout from '../Layout/Layout'
-import signupLogo from '../../img/signup-logo.webp'
 
-const Login = () => {
+
+const Signup = () => {
+	const [currentUser, setCurrentUser] = useState(null)
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		const { email, password } = e.target.elements;
+		try {
+			fire.auth().createUserWithEmailAndPassword(email.value, password.value);
+			setCurrentUser(true);
+		} catch(err) {
+			alert(err);
+		}
+	}
+
+	if (currentUser) {
+		return <Redirect to="/" />
+	}
+
 	return (
 		<Layout>
-			<div className={styles.pad}>
-				<div className={styles.container}>
-					<div className={styles.left}>
-						<img src={signupLogo} alt="Signup logo"/>
-						<Link to="/login" className={`${styles.btn} ${styles.btnLogIn}`}>Log In</Link>
-						<br/>
-						<Link to="/signup" className={`${styles.btn} ${styles.btnSignUp}`}>Sign Up</Link>
+			<div className={`p-5 ${styles.signup}`}>
+				<div className={`${styles.container} p-5`}>
+					<div>
+						<img src="https://cdn.pixabay.com/photo/2016/11/30/12/17/cells-1872666__340.jpg" className={`${styles.image} rounded-lg `} />
 					</div>
-					<div className={styles.right}>
-						<h2>Create account for free</h2>
-						<div className={styles.formCover}>
-							<div className={styles.icons}>
-								<ion-icon name="person-outline" className={styles.outline}></ion-icon>
-								<ion-icon name="mail-outline" className={styles.outline}></ion-icon>
-								<ion-icon name="key-outline" className={styles.outline}></ion-icon>
-							</div>
-							<form action="www.google.com">
-								<input type="text" name="name" id="name" placeholder="Your Name" />
-								<input type="email" name="email" id="email" placeholder="Your Email" />
-								<input type="password" name="password" id="password" placeholder="Your Password" />
-							</form>
-						</div>
-						<Link to="/" className={styles.submit}>Sign up</Link>
+					<div className="h2 text-center my-4 text-dark">Please register yourself</div>
+					<div className="border border-primary container my-4 w-25"></div>
+					<div className="p-5 rounded-lg">
+						<Form onSubmit={handleSubmit}>
+						  <Form.Group controlId="formBasicEmail" className="mb-4">
+						    <Form.Label>Email address</Form.Label>
+						    <InputGroup className="mb-3" size="lg">
+							    <InputGroup.Prepend>
+							      <InputGroup.Text id="basic-addon1" className="bg-primary">
+							      	<ion-icon name="mail-open"></ion-icon>
+							      </InputGroup.Text>
+							    </InputGroup.Prepend>
+							    <FormControl
+							      className={styles.removeFocus}
+							      type="text"
+							      name="email"
+							      placeholder="Enter your email"
+							      aria-label="Enter your email"
+							      aria-describedby="basic-addon1"
+							    />
+							</InputGroup>
+						    <Form.Text className="text-info">
+						      We'll never share your email with anyone else.
+						    </Form.Text>
+						  </Form.Group>
+
+						  <Form.Group controlId="formBasicPassword" className="mb-4">
+						    <Form.Label>Password</Form.Label>
+						    <InputGroup className="mb-3" size="lg">
+							    <InputGroup.Prepend>
+							      <InputGroup.Text id="basic-addon1" className="bg-primary">
+							      	<ion-icon name="key"></ion-icon>
+							      </InputGroup.Text>
+							    </InputGroup.Prepend>
+							    <FormControl
+							      className={styles.removeFocus}
+							      type="password"
+							      name="password"
+							      placeholder="Enter password"
+							      aria-label="Enter password"
+							      aria-describedby="basic-addon1"
+							    />
+							</InputGroup>
+						  </Form.Group>
+						  <div>
+						  	<Button type="submit" variant="outline-success" size="lg" className="mr-4 mt-4">
+							    Sign Up
+							</Button>
+							<Button variant="outline-danger" size="lg" onClick={signInWithGoogle} className="mt-4">
+							    Log In with Google
+							</Button>
+						  </div>
+						</Form>
 					</div>
 				</div>
 			</div>
@@ -38,4 +92,4 @@ const Login = () => {
 	)
 }
 
-export default Login
+export default Signup

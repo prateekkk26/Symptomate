@@ -20,51 +20,31 @@ const About = () => {
 				With the help of data extraction techniques, the app evaluates entered symptoms. It holds a information of many
 				conditions and helps the user in getting an instant health closeup.
 			</p>
-			<div className={styles.doctors}>
-				<ul className={styles.doctorShowcase}>
-					<li>
-						<figure className={styles.doctorPhoto}>
-							<img src={doctor1} alt="doctor-1" className={styles.item} />
-						</figure>
-					</li>
-					<li>
-						<figure className={styles.doctorPhoto}>
-							<img src={doctor2} alt="doctor-2" className={styles.item} />
-						</figure>
-					</li>
-					<li>
-						<figure className={styles.doctorPhoto}>
-							<img src={doctor3} alt="doctor-3" className={styles.item} />
-						</figure>
-					</li>
-					<li>
-						<figure className={styles.doctorPhoto}>
-							<img src={doctor4} alt="doctor-4" className={styles.item} />
-						</figure>
-					</li>
-				</ul>
-				<ul className={styles.doctorShowcase}>
-					<li>
-						<figure className={styles.doctorPhoto}>
-							<img src={doctor5} alt="doctor-5" className={styles.item} />
-						</figure>
-					</li>
-					<li>
-						<figure className={styles.doctorPhoto}>
-							<img src={doctor6} alt="doctor-6" className={styles.item} />
-						</figure>
-					</li>
-					<li>
-						<figure className={styles.doctorPhoto}>
-							<img src={doctor7} alt="doctor-7" className={styles.item} />
-						</figure>
-					</li>
-					<li>
-						<figure className={styles.doctorPhoto}>
-							<img src={doctor8} alt="doctor-8" className={styles.item} />
-						</figure>
-					</li>
-				</ul>
+			<div className={`d-lg-flex justify-content-center align-items-stretch ${styles.doctors}`}>
+				<figure className={styles.doctorPhoto}>
+						<img src={doctor1} alt="doctor-1" className={styles.item} />
+				</figure>
+				<figure className={styles.doctorPhoto}>
+					<img src={doctor2} alt="doctor-2" className={styles.item} />
+				</figure>
+				<figure className={styles.doctorPhoto}>
+					<img src={doctor3} alt="doctor-3" className={styles.item} />
+				</figure>
+				<figure className={styles.doctorPhoto}>
+					<img src={doctor4} alt="doctor-4" className={styles.item} />
+				</figure>
+				<figure className={styles.doctorPhoto}>
+					<img src={doctor5} alt="doctor-5" className={styles.item} />
+				</figure>
+				<figure className={styles.doctorPhoto}>
+					<img src={doctor6} alt="doctor-6" className={styles.item} />
+				</figure>
+				<figure className={styles.doctorPhoto}>
+					<img src={doctor7} alt="doctor-7" className={styles.item} />
+				</figure>
+				<figure className={styles.doctorPhoto}>
+					<img src={doctor8} alt="doctor-8" className={styles.item} />
+				</figure>
 			</div>
 		</div>
 	)

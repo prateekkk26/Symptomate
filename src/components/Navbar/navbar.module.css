@@ -12,7 +12,7 @@
 
 .logo {
 	float: left;
-	width: 9rem;
+	width: 4rem;
 	height: auto;
 }
 
@@ -51,8 +51,7 @@
 
 .btn{
 	margin-right: 2rem;
-	padding: 0.5rem;
-	border-radius: 1rem;
+	border-radius: 0.3rem;
 }
 
 .btnGreen:link,
@@ -87,9 +86,13 @@
 	display: none;
 }
 
+.toggle:hover {
+	cursor: pointer;
+}
+
 .block {
 	width: 100%;
-	background-color: var(--mainWhite);
+	background-color: var(--darkGrey);
 }
 
 .blockList {
@@ -104,29 +107,14 @@
 	padding: 1.5rem;
 }
 
-.blockLink:after {
+/*.blockLink:after {
 	content: " ";
 	display: block;
 	width: 25rem;
 	margin: 1rem auto 0 auto;
 	height: 0.1rem;
-	background-color: var(--mainBlue);
-}
-
-.blockLink:hover,
-.blockLink:active {
-	background-color: var(--lightGrey);
-}
-
-.blockLink:nth-child(3):hover,
-.blockLink:nth-child(3):active {
-	background-color: var(--mainGreen);
-}
-
-.blockLink:nth-child(4):hover,
-.blockLink:nth-child(4):active {
-	background-color: var(--mainRed);
-}
+	background-color: var(--darkGrey);
+}*/
 
 .blockLink a:link,
 .blockLink a:visited,
@@ -134,9 +122,15 @@
 .blockBtn:visited {
 	text-decoration: none;
 	transition: border-bottom 0.5s;
-	color: var(--mainBlue);
+	color: var(--mainBlack);
 	padding: 1rem;
 	text-transform: uppercase;
+}
+
+.blockLink a:hover,
+.blockLink a:active {
+	background-color: var(--mainBlue);
+	color: var(--lightGrey);
 }
 
 @media screen and (max-width: 770px) {
@@ -151,10 +145,17 @@
 	.toggle {
 		display: inline-block;
 	}
+	.logo {
+		margin-top: 1rem;
+		width: 3rem;
+	}
 }
 @media screen and (max-width: 480px) {
 	.cover {
 		max-width: 80rem;
+	}
+	.logo {
+		width: 3rem;
 	}
 }
 

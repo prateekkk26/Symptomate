@@ -1,0 +1,35 @@
+.evidence {
+	margin-top: 2rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	flex: 1 1 auto;
+}
+
+.flexItem {
+	margin-bottom: 2rem;
+	background-color: var(--lightGrey);
+	border-radius: 0.5rem;
+	width: 100%;
+}
+
+.symptom {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.info span {
+	font-weight: bold;
+}
+
+@media screen and (max-width: 770px) {
+	
+}
+@media screen and (max-width: 480px) {
+	.flexItem {
+		margin-right: 0;
+		width: 100%;
+	}
+}
