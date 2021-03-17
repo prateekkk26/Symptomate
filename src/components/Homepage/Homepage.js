@@ -10,16 +10,12 @@ import Countries from '../Countries/Countries'
 const Homepage = () => {
 	// const { currentUser } = useContext(AuthContext)
 
-	useEffect(() => {
-		return () => {
-			initializeReactGA();
-		};
-	}, [])
-
 	const initializeReactGA = () => {
       ReactGA.initialize('UA-192431574-1');
       ReactGA.pageview('/homepage');
     }
+
+    initializeReactGA();
 
 	return (
 		<Layout>
