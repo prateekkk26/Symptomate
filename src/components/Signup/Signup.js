@@ -10,9 +10,9 @@ import Layout from '../Layout/Layout'
 
 
 const Signup = () => {
-	useEffect(() => {
-		ReactGA.pageview(window.location.pathname + window.location.search);
-	}, [])
+	// useEffect(() => {
+	// 	ReactGA.pageview(window.location.pathname + window.location.search);
+	// }, [])
 
 	const [currentUser, setCurrentUser] = useState(null)
 	const handleSubmit = (e) => {

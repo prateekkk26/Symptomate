@@ -13,15 +13,15 @@ const Homepage = () => {
 	// const { currentUser } = useContext(AuthContext)
 
 	useEffect(() => {
+		ReactGA.initialize('UA-192431574-1');
 		ReactGA.pageview(window.location.pathname + window.location.search);
-	})
+	}, []);
 
-	const initializeReactGA = () => {
-      ReactGA.initialize('UA-192431574-1');
-      ReactGA.pageview('/homepage');
-    }
+	// const initializeReactGA = () => {
+ //      ReactGA.initialize('UA-192431574-1');
+ //    }
 
-    initializeReactGA();
+ //    initializeReactGA();
 
 	return (
 		<Layout>

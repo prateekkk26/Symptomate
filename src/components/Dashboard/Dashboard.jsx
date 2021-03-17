@@ -44,10 +44,11 @@ class Dashboard extends React.Component {
 		  modalData: undefined,
 		}
 	}
-  componentDidMount(){
-    this.getSymptoms();
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }
+  // componentDidMount(){
+  //   this.getSymptoms();
+  //   React.
+  //   ReactGA.pageview(window.location.pathname + window.location.search);
+  // }
   getSymptoms = ()=>{
     let header = {
       "Accept": "application/json",
