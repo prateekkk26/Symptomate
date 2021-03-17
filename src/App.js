@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {Redirect, BrowserRouter, Switch, Route} from 'react-router-dom'
+import ReactGA from 'react-ga'
 import './App.css';
 
 import Homepage from './components/Homepage/Homepage'
@@ -11,6 +12,11 @@ import { AuthProvider } from './components/Auth'
 
 class App extends Component {
   render() {
+    const initializeReactGA = () => {
+      ReactGA.initialize('UA-192431574-1');
+      ReactGA.pageview('/homepage');
+    }
+
     return (
         <AuthProvider>
         	<BrowserRouter>
