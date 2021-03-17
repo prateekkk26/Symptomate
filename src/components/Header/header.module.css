@@ -20,6 +20,7 @@
 	margin-bottom: 2.5rem;
 	color: var(--mainBlack);
 	animation: moveInRight 1s ease-out;
+	font-weight: bold;
 }
 
 .subtitle {
@@ -29,6 +30,7 @@
 	color: var(--mainBlack);
 	animation: moveInLeft 1s ease-out;
 	text-transform: uppercase;
+	font-weight: bold;
 }
 
 .btn {

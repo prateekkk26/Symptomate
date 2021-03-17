@@ -1,5 +1,5 @@
 import React from 'react'
-import {Form, Button, Container} from 'react-bootstrap'
+import {Form, Button} from 'react-bootstrap'
 import styles from'./info.module.css'
 const Info = (props) => {
     return (

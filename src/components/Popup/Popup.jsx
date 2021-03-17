@@ -1,21 +1,16 @@
 import React from 'react'
-import {Button, Alert, Badge} from 'react-bootstrap'
+import {Button} from 'react-bootstrap'
 import styles from './popup.module.css'
 import Visualize from '../Visualize/Visualize.jsx'
 
 
 function Popup(props) {
-    {/*let buttons = props.data.question.items[0].choices.map((data, index)=>
-            <Button variant="outline-info" onClick={()=>{props.click(data.id, props.data.question.items[0].id)}} key={data.id} className={`mx-3 my-2 btn-lg ${styles.choice}`}>
-                {data.label}
-            </Button>
-        )*/}
     let buttons = props.data.question.items.map((data, index) =>
             <div className={`mt-3`}>
                 <div className={`h4 text-primary`}>{data.name}</div>
                 {
                     props.data.question.items[index].choices.map((option, i) =>
-                        <Button variant="outline-info" onClick={() => {props.click(option.id, props.data.question.items[index].id)}} key={option.id} className={`mr-3 my-2 btn-lg ${styles.choice}`}>
+                        <Button key={i} variant="outline-info" onClick={() => {props.click(option.id, props.data.question.items[index].id)}} className={`mr-3 my-2 btn-lg ${styles.choice}`}>
                             {option.label}
                         </Button>
                   )

@@ -1,8 +1,8 @@
 import React, {useContext} from 'react'
-import {Redirect, Link} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
 import fire from '../../config/firebase'
 import { AuthContext } from "../Auth";
-import { signInWithGoogle, auth } from '../../config/firebase';
+import { signInWithGoogle} from '../../config/firebase';
 import styles from './login.module.css'
 import {Form, InputGroup, FormControl, Button} from 'react-bootstrap'
 
@@ -28,9 +28,13 @@ const Login = () => {
 			<div className={`p-5 ${styles.login}`}>
 				<div className={`${styles.container} p-5`}>
 					<div>
-						<img src="https://cdn.pixabay.com/photo/2013/07/18/10/55/dna-163466__340.jpg" className={`${styles.image} rounded-lg `} />
+						<img 
+							src="https://cdn.pixabay.com/photo/2013/07/18/10/55/dna-163466__340.jpg" 
+							alt="login-background"
+							className={`${styles.image} rounded-lg `} 
+						/>
 					</div>
-					<div className="h2 text-center my-4 text-dark">Welcome to Symptomate</div>
+					<div className="h2 text-center my-4 text-dark font-weight-bold">Welcome to Symptomate</div>
 					<div className="border border-primary container my-4 w-25"></div>
 					<div className="p-5 rounded-lg">
 						<Form onSubmit={handleSubmit}>
@@ -75,10 +79,10 @@ const Login = () => {
 							</InputGroup>
 						  </Form.Group>
 						  <div>
-						  	<Button type="submit" variant="outline-success" size="lg" className="mr-4 mt-4">
+						  	<Button type="submit" variant="outline-success" size="lg" className="mr-4 mt-4 font-weight-bold">
 							    Log In
 							</Button>
-							<Button variant="outline-danger" size="lg" onClick={signInWithGoogle} className="mt-4">
+							<Button variant="outline-danger" size="lg" onClick={signInWithGoogle} className="mt-4 font-weight-bold">
 							    Log In with Google
 							</Button>
 						  </div>

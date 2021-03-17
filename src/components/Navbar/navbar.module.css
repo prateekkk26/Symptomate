@@ -42,6 +42,7 @@
 .navLink a{
 	margin-right: 3rem;
 	padding-bottom: 0.7rem;
+	font-weight: bold;
 }
 
 .navLink a:hover,
@@ -58,6 +59,7 @@
 .btnGreen:visited {
 	color: var(--mainGreen);
 	border: 1px solid var(--mainGreen);
+	font-weight: bold;
 }
 
 .btnRed:link,
@@ -65,6 +67,7 @@
 	color: var(--mainRed);
 	border: 1px solid var(--mainRed);
 	transition: color 0.2s, background-color 0.2s;
+	font-weight: bold;
 }
 
 .btnGreen:active,
@@ -122,15 +125,16 @@
 .blockBtn:visited {
 	text-decoration: none;
 	transition: border-bottom 0.5s;
-	color: var(--mainBlack);
+	color: var(--mainWhite);
 	padding: 1rem;
 	text-transform: uppercase;
+	font-weight: bold;
 }
 
 .blockLink a:hover,
 .blockLink a:active {
 	background-color: var(--mainBlue);
-	color: var(--lightGrey);
+	color: var(--mainWhite);
 }
 
 @media screen and (max-width: 770px) {

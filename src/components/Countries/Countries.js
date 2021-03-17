@@ -12,7 +12,6 @@ class Countries extends Component {
 		{
 			countries.map(country => countryName.push(country.country))
 			countries.map(country => healthIndex.push(country.healthIndex))
-			console.log(countryName, healthIndex);
 		}
 		const state = {
 		  labels: countryName,

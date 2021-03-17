@@ -22,7 +22,7 @@ const Navbar = () => {
 						<li className={styles.navLink}><Link to="/">Home</Link></li>	
 						<li className={styles.navLink}><Link to="/analyze">Analyze</Link></li>
 						{
-							currentUser ? <Link to="/login" className={`${styles.btn} ${styles.btnGreen}`} onClick={() => fire.auth().signOut()}>Log out</Link>
+							currentUser ? <Link to="/login" className={`px-2 py-1 ${styles.btn} ${styles.btnGreen}`} onClick={() => fire.auth().signOut()}>Log out</Link>
 								: <Link to="/login" className={`px-2 py-1 ${styles.btn} ${styles.btnGreen}`}>Log In</Link> 
 						}
 						<Link to="/signup" className={`px-2 py-1 ${styles.btn} ${styles.btnRed}`}>Sign Up</Link>

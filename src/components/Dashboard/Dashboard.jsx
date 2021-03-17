@@ -7,7 +7,7 @@ import Layout from '../Layout/Layout.js'
 import Conditions from '../Conditions/Conditions.jsx'
 import SearchBar from '../SearchBar/SearchBar.jsx'
 import Info from '../Info/Info.jsx'
-import Popup from '../Popup/Popup'
+import Popup from '../Popup/Popup.jsx'
 import UI from '../UI/UI.jsx'
 
 Modal.setAppElement('#root')
@@ -82,7 +82,6 @@ class Dashboard extends React.Component {
       }, {
         headers: header
       }).then(res=>{
-        console.log(res.data)
         this.setState({
           modalData: res.data,
           modalIsOpen: true
@@ -110,7 +109,6 @@ class Dashboard extends React.Component {
     }, {
       headers: header
     }).then(res=>{
-      console.log(res.data)
       this.setState({
         modalData: res.data,
         modalIsOpen: true
@@ -134,6 +132,7 @@ class Dashboard extends React.Component {
     })
   }
 
+
   render(){
     return (
         <Layout>
@@ -143,9 +142,9 @@ class Dashboard extends React.Component {
               <Info sex={this.state.gender} reset={this.reset} gender={this.state.gender} age={this.state.age} onAgeChanged={this.onAgeChanged} onSexChanged={this.onSexChanged} submit={this.submit} />
               <SearchBar symptoms={this.state.symptoms} selected={this.symptomSelected} />
               {
-                this.state.evidence.length != 0 ? <Conditions symptoms={this.state.symptoms} conditions={this.state.conditions} /> : null
+                this.state.evidence.length !== 0 ? <Conditions symptoms={this.state.symptoms} conditions={this.state.conditions} /> : null
               }
-              {/*<UI symptoms={this.state.symptoms} selected={this.symptomSelected}/>*/}
+              
               <Modal
                   isOpen={this.state.modalIsOpen}
                   onRequestClose={this.closeModal}

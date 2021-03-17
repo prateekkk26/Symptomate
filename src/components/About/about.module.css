@@ -8,6 +8,7 @@
 	text-align: center;
 	margin-top: 4rem;
 	word-spacing: 0.5rem;
+	font-weight: bold;
 }
 .container h2:after {
 	content: " ";

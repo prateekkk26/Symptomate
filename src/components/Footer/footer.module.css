@@ -19,6 +19,7 @@
 	color: var(--mainWhite);
 	text-transform: uppercase;
 	word-spacing: 0.5rem;
+	font-weight: bold;
 }
 
 .cover h2:after {

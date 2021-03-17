@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Redirect, Link} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
 import {Form, InputGroup, FormControl, Button} from 'react-bootstrap'
 import fire from '../../config/firebase'
 import { signInWithGoogle} from '../../config/firebase';
@@ -30,9 +30,13 @@ const Signup = () => {
 			<div className={`p-5 ${styles.signup}`}>
 				<div className={`${styles.container} p-5`}>
 					<div>
-						<img src="https://cdn.pixabay.com/photo/2016/11/30/12/17/cells-1872666__340.jpg" className={`${styles.image} rounded-lg `} />
+						<img 
+							src="https://cdn.pixabay.com/photo/2016/11/30/12/17/cells-1872666__340.jpg" 
+							alt="signup-background"
+							className={`${styles.image} rounded-lg `} 
+						/>
 					</div>
-					<div className="h2 text-center my-4 text-dark">Please register yourself</div>
+					<div className="h2 text-center my-4 text-dark font-weight-bold">Please register yourself</div>
 					<div className="border border-primary container my-4 w-25"></div>
 					<div className="p-5 rounded-lg">
 						<Form onSubmit={handleSubmit}>
@@ -77,10 +81,10 @@ const Signup = () => {
 							</InputGroup>
 						  </Form.Group>
 						  <div>
-						  	<Button type="submit" variant="outline-success" size="lg" className="mr-4 mt-4">
+						  	<Button type="submit" variant="outline-success" size="lg" className="mr-4 mt-4  font-weight-bold">
 							    Sign Up
 							</Button>
-							<Button variant="outline-danger" size="lg" onClick={signInWithGoogle} className="mt-4">
+							<Button variant="outline-danger" size="lg" onClick={signInWithGoogle} className="mt-4  font-weight-bold">
 							    Log In with Google
 							</Button>
 						  </div>

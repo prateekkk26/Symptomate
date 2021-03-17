@@ -1,14 +1,26 @@
 import React, {useState} from 'react'
 import './searchbar.css'
 import { Icon, Input, AutoComplete } from 'antd';
-import { Button } from 'react-bootstrap';
 
-const { Option, OptGroup } = AutoComplete;
+const { Option} = AutoComplete;
 const SearchBar = (props) => {
     const [dataSource, changeSource] = useState(props.symptoms)
     const handleSearch = (e) => {
-        let new_symptoms = props.symptoms.filter((s) => (s.name.toLowerCase().includes(e)));
-        changeSource(new_symptoms);
+        // let new_symptoms = props.symptoms.filter((s) => (s.name.toLowerCase().includes(e)));
+        // changeSource(new_symptoms);
+
+        let new_symptoms = [];
+        let arrayToString = JSON.stringify(Object.assign({}, props.symptoms))
+        let stringToObject = JSON.parse(arrayToString)
+        for(var key in stringToObject) {
+            if(stringToObject.hasOwnProperty(key)) {
+                var val = stringToObject[key];
+                if(val.name.toLowerCase().includes(e))
+                    new_symptoms.push(val);
+            }
+        }
+        changeSource(new_symptoms)
+
     }
 
 
@@ -19,6 +31,7 @@ const SearchBar = (props) => {
             <div className="" style={{ width: '100%' }}>
                 <AutoComplete
                     className="certain-category-search"
+                    allowClear
                     dropdownClassName="certain-category-search-dropdown"
                     dropdownMatchSelectWidth={false}
                     dropdownStyle={{ width: 200 }}
