@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import ReactGA from 'react-ga'
 
 import Layout from '../Layout/Layout'
 import Header from '../Header/Header'
@@ -8,6 +9,17 @@ import Countries from '../Countries/Countries'
 
 const Homepage = () => {
 	// const { currentUser } = useContext(AuthContext)
+
+	useEffect(() => {
+		return () => {
+			initializeReactGA();
+		};
+	}, [])
+
+	const initializeReactGA = () => {
+      ReactGA.initialize('UA-192431574-1');
+      ReactGA.pageview('/homepage');
+    }
 
 	return (
 		<Layout>

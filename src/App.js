@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import {Redirect, BrowserRouter, Switch, Route} from 'react-router-dom'
-import ReactGA from 'react-ga'
 import './App.css';
 
 import Homepage from './components/Homepage/Homepage'
@@ -12,10 +11,6 @@ import { AuthProvider } from './components/Auth'
 
 class App extends Component {
   render() {
-    const initializeReactGA = () => {
-      ReactGA.initialize('UA-192431574-1');
-      ReactGA.pageview('/homepage');
-    }
 
     return (
         <AuthProvider>
@@ -26,7 +21,7 @@ class App extends Component {
       			<Route exact path="/signup" component={Signup} />
             <Route exact path="/analyze" component={Dashboard} />
             <Route path="/404" component={error} />
-            <Redirect to="/404" />
+          <Redirect to="/404" />
       		</Switch>
       	</BrowserRouter>
       </AuthProvider>
