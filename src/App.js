@@ -11,12 +11,6 @@ import { AuthProvider } from './components/Auth'
 import ReactGA from 'react-ga'
 
 const App = () => {
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
-
-  ReactGA.initialize('UA-192431574-1');
-
   return (
       <AuthProvider>
       	<BrowserRouter>
