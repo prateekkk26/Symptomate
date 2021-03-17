@@ -9,6 +9,7 @@ import Dashboard from './components/Dashboard/Dashboard'
 import error from './components/404/error'
 import { AuthProvider } from './components/Auth'
 import ReactGA from 'react-ga'
+import { withRouter } from 'react-router-dom'
 
 const App = () => {
   useEffect(() => {
@@ -32,4 +33,4 @@ const App = () => {
   )
 }
 
-export default App;
+export default withRouter(App);
