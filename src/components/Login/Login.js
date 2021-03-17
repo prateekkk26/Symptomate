@@ -1,14 +1,19 @@
-import React, {useContext} from 'react'
+import React, {useContext, useEffect} from 'react'
 import {Redirect} from 'react-router-dom'
 import fire from '../../config/firebase'
 import { AuthContext } from "../Auth";
 import { signInWithGoogle} from '../../config/firebase';
 import styles from './login.module.css'
 import {Form, InputGroup, FormControl, Button} from 'react-bootstrap'
+import ReactGA from 'react-ga'
 
 import Layout from '../Layout/Layout'
 
 const Login = () => {
+	useEffect(() => {
+	    ReactGA.pageview(window.location.pathname + window.location.search);
+	}, [])
+
 	const handleSubmit = (e) => {
 	    e.preventDefault();
 	    const { email, password } = e.target.elements;

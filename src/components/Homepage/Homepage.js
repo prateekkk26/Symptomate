@@ -7,8 +7,14 @@ import About from '../About/About'
 import Countries from '../Countries/Countries'
 // import { AuthContext } from '../Auth'
 
+import { withRouter } from 'react-router-dom'
+
 const Homepage = () => {
 	// const { currentUser } = useContext(AuthContext)
+
+	useEffect(() => {
+		ReactGA.pageview(window.location.pathname + window.location.search);
+	})
 
 	const initializeReactGA = () => {
       ReactGA.initialize('UA-192431574-1');
@@ -27,4 +33,4 @@ const Homepage = () => {
 	)
 }
 
-export default Homepage
+export default withRouter(Homepage)

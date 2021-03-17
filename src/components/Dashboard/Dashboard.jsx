@@ -9,10 +9,12 @@ import SearchBar from '../SearchBar/SearchBar.jsx'
 import Info from '../Info/Info.jsx'
 import Popup from '../Popup/Popup.jsx'
 import UI from '../UI/UI.jsx'
+import ReactGA from 'react-ga'
 
 Modal.setAppElement('#root')
 
 class Dashboard extends React.Component {
+
 	customStyles = {
       overlay: {
         backgroundColor: 'rgba(0,0,0,.8)'
@@ -28,6 +30,7 @@ class Dashboard extends React.Component {
         boxShadow: `0 0 5px var(--mainWhite)`,
     	}
   	};
+
 	// api_data = env()
 	constructor(){
 		super()
@@ -43,6 +46,7 @@ class Dashboard extends React.Component {
 	}
   componentDidMount(){
     this.getSymptoms();
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }
   getSymptoms = ()=>{
     let header = {
