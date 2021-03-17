@@ -1,19 +1,14 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import {Redirect} from 'react-router-dom'
 import {Form, InputGroup, FormControl, Button} from 'react-bootstrap'
 import fire from '../../config/firebase'
 import { signInWithGoogle} from '../../config/firebase';
 import styles from './signup.module.css'
-import ReactGA from 'react-ga'
 
 import Layout from '../Layout/Layout'
 
 
 const Signup = () => {
-	// useEffect(() => {
-	// 	ReactGA.pageview(window.location.pathname + window.location.search);
-	// }, [])
-
 	const [currentUser, setCurrentUser] = useState(null)
 	const handleSubmit = (e) => {
 		e.preventDefault();

@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react'
+import React, {useContext} from 'react'
 import {Redirect} from 'react-router-dom'
 import fire from '../../config/firebase'
 import { AuthContext } from "../Auth";
@@ -10,20 +10,30 @@ import ReactGA from 'react-ga'
 import Layout from '../Layout/Layout'
 
 const Login = () => {
-	useEffect(() => {
-		ReactGA.initialize('UA-192431574-1');
-	    ReactGA.pageview(window.location.pathname + window.location.search);
-	}, [])
 
 	const handleSubmit = (e) => {
 	    e.preventDefault();
 	    const { email, password } = e.target.elements;
 	    try {
 	      fire.auth().signInWithEmailAndPassword(email.value, password.value);
+
+	      ReactGA.event({
+	      	category: "Button",
+	      	action: "Clicked the log in button"
+	      })
 	    } catch (err) {
 	      alert(err);
 	    }
 	};
+
+	const handleOnClick = () => {
+		ReactGA.event({
+	      	category: "Button",
+	      	action: "Clicked the log in with google button"
+	    });
+	    signInWithGoogle();
+	}
+
 	const { currentUser } = useContext(AuthContext);
 	if (currentUser) {
 		return <Redirect to="/" />;
@@ -88,7 +98,7 @@ const Login = () => {
 						  	<Button type="submit" variant="outline-success" size="lg" className="mr-4 mt-4 font-weight-bold">
 							    Log In
 							</Button>
-							<Button variant="outline-danger" size="lg" onClick={signInWithGoogle} className="mt-4 font-weight-bold">
+							<Button variant="outline-danger" size="lg" onClick={handleOnClick} className="mt-4 font-weight-bold">
 							    Log In with Google
 							</Button>
 						  </div>

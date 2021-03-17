@@ -9,7 +9,6 @@ import SearchBar from '../SearchBar/SearchBar.jsx'
 import Info from '../Info/Info.jsx'
 import Popup from '../Popup/Popup.jsx'
 import UI from '../UI/UI.jsx'
-import ReactGA from 'react-ga'
 
 Modal.setAppElement('#root')
 
@@ -44,11 +43,7 @@ class Dashboard extends React.Component {
 		  modalData: undefined,
 		}
 	}
-  // componentDidMount(){
-  //   this.getSymptoms();
-  //   React.
-  //   ReactGA.pageview(window.location.pathname + window.location.search);
-  // }
+
   getSymptoms = ()=>{
     let header = {
       "Accept": "application/json",
