@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {Redirect, BrowserRouter, Switch, Route} from 'react-router-dom'
 import './App.css';
 
@@ -14,7 +14,7 @@ const App = () => {
     ReactGA.initialize('UA-192431574-1');
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
-  
+
   return (
       <AuthProvider>
       	<BrowserRouter>
