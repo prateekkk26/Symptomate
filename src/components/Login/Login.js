@@ -10,9 +10,10 @@ import ReactGA from 'react-ga'
 import Layout from '../Layout/Layout'
 
 const Login = () => {
-	// useEffect(() => {
-	//     ReactGA.pageview(window.location.pathname + window.location.search);
-	// }, [])
+	useEffect(() => {
+		ReactGA.initialize('UA-192431574-1');
+	    ReactGA.pageview(window.location.pathname + window.location.search);
+	}, [])
 
 	const handleSubmit = (e) => {
 	    e.preventDefault();
