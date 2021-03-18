@@ -8,15 +8,9 @@ import Signup from './components/Signup/Signup'
 import Dashboard from './components/Dashboard/Dashboard'
 import error from './components/404/error'
 import { AuthProvider } from './components/Auth'
-import ReactGA from 'react-ga'
 
 const App = () => {
 
-  useEffect(() => {
-      ReactGA.initialize('UA-192431574-1');
-      ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
-  
   return (
       <AuthProvider>
       	<BrowserRouter>
