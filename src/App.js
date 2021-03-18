@@ -13,7 +13,6 @@ import ReactGA from 'react-ga'
 const App = () => {
 
   ReactGA.initialize('UA-192431574-1');
-  ReactGA.pageview(window.location.pathname + window.location.search);
 
   return (
       <AuthProvider>

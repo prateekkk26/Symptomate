@@ -11,6 +11,10 @@ import Layout from '../Layout/Layout'
 
 const Login = () => {
 
+	useEffect(() => {
+		ReactGA.pageview('/login')
+	}, [])
+
 	const handleSubmit = (e) => {
 	    e.preventDefault();
 	    const { email, password } = e.target.elements;
@@ -36,7 +40,7 @@ const Login = () => {
 
 	const { currentUser } = useContext(AuthContext);
 	if (currentUser) {
-		return <Redirect to="/" />;
+		return <Redirect to="/home" />;
 	}
 
 	return (

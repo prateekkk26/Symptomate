@@ -14,12 +14,12 @@ const Navbar = () => {
 		<div>
 			<nav className={styles.container}>
 				<div className={styles.cover}>
-					<Link to="/"><img src={logo} alt="Symptomate Logo" className={styles.logo} /></Link>
+					<Link to="/home"><img src={logo} alt="Symptomate Logo" className={styles.logo} /></Link>
 					<ul className={styles.navList}>
 						<li className={styles.toggle} onClick={() => setActive(!active)}>
 							<ion-icon name="menu"></ion-icon>
 						</li>
-						<li className={styles.navLink}><Link to="/">Home</Link></li>	
+						<li className={styles.navLink}><Link to="/home">Home</Link></li>	
 						<li className={styles.navLink}><Link to="/analyze">Analyze</Link></li>
 						{
 							currentUser ? <Link to="/login" className={`px-2 py-1 ${styles.btn} ${styles.btnGreen}`} onClick={() => fire.auth().signOut()}>Log out</Link>
@@ -32,7 +32,7 @@ const Navbar = () => {
 			{
 				active ? <div className={styles.block}>
 					<ul className={styles.blockList}>
-						<li className={`${styles.blockLink}`}><Link to="/">Home</Link></li>
+						<li className={`${styles.blockLink}`}><Link to="/home">Home</Link></li>
 						<li className={`${styles.blockLink}`}><Link to="/analyze">Analyze</Link></li>
 						<li className={`${styles.blockLink}`}>
 							{

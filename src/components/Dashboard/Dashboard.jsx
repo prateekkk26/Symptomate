@@ -9,10 +9,15 @@ import SearchBar from '../SearchBar/SearchBar.jsx'
 import Info from '../Info/Info.jsx'
 import Popup from '../Popup/Popup.jsx'
 import UI from '../UI/UI.jsx'
+import ReactGA from 'react-ga' 
 
 Modal.setAppElement('#root')
 
 class Dashboard extends React.Component {
+
+  componentDidMount() {
+    ReactGA.pageview('/analyze');
+  }
 
 	customStyles = {
       overlay: {

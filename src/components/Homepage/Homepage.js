@@ -10,8 +10,7 @@ import ReactGA from 'react-ga'
 const Homepage = () => {
 
 	useEffect(() => {
-	    ReactGA.initialize('UA-192431574-1');
-	    ReactGA.pageview(window.location.pathname + window.location.search);
+	    ReactGA.pageview('/home');
 	}, []);
 
 	return (
