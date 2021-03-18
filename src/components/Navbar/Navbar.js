@@ -14,7 +14,7 @@ const Navbar = () => {
 		<div>
 			<nav className={styles.container}>
 				<div className={styles.cover}>
-					<Link to="/home"><img src={logo} alt="Symptomate Logo" className={styles.logo} /></Link>
+					<Link to="/"><img src={logo} alt="Symptomate Logo" className={styles.logo} /></Link>
 					<ul className={styles.navList}>
 						<li className={styles.toggle} onClick={() => setActive(!active)}>
 							<ion-icon name="menu"></ion-icon>
@@ -32,7 +32,7 @@ const Navbar = () => {
 			{
 				active ? <div className={styles.block}>
 					<ul className={styles.blockList}>
-						<li className={`${styles.blockLink}`}><Link to="/home">Home</Link></li>
+						<li className={`${styles.blockLink}`}><Link to="/">Home</Link></li>
 						<li className={`${styles.blockLink}`}><Link to="/analyze">Analyze</Link></li>
 						<li className={`${styles.blockLink}`}>
 							{

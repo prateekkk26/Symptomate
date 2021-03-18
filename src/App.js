@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 import {Redirect, BrowserRouter, Switch, Route} from 'react-router-dom'
 import './App.css';
 
@@ -18,7 +18,7 @@ const App = () => {
       <AuthProvider>
       	<BrowserRouter>
   			<Switch>
-    			<Route exact path="/home" component={Homepage} />
+    			<Route exact path="/" component={Homepage} />
     			<Route exact path="/login" component={Login} />
     			<Route exact path="/signup" component={Signup} />
           <Route exact path="/analyze" component={Dashboard} />

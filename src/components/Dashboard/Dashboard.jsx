@@ -16,7 +16,7 @@ Modal.setAppElement('#root')
 class Dashboard extends React.Component {
 
   componentDidMount() {
-    ReactGA.pageview('/analyze');
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
 	customStyles = {

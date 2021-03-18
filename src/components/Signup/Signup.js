@@ -10,7 +10,7 @@ import Layout from '../Layout/Layout'
 
 const Signup = () => {
 	useEffect(() => {
-		ReactGA.pageview('/signup')
+		ReactGA.pageview(window.location.pathname + window.location.search);
 	}, []);
 
 	const [currentUser, setCurrentUser] = useState(null)
@@ -26,7 +26,7 @@ const Signup = () => {
 	}
 
 	if (currentUser) {
-		return <Redirect to="/home" />
+		return <Redirect to="/" />
 	}
 
 	return (

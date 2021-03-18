@@ -12,7 +12,7 @@ import Layout from '../Layout/Layout'
 const Login = () => {
 
 	useEffect(() => {
-		ReactGA.pageview('/login')
+		ReactGA.pageview(window.location.pathname + window.location.search);
 	}, [])
 
 	const handleSubmit = (e) => {
@@ -40,7 +40,7 @@ const Login = () => {
 
 	const { currentUser } = useContext(AuthContext);
 	if (currentUser) {
-		return <Redirect to="/home" />;
+		return <Redirect to="/" />;
 	}
 
 	return (
