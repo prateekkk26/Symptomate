@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import fire from "../config/firebase";
 
+import Spinner from './Spinner/Spinner'
+
 export const AuthContext = React.createContext();
 
 export const AuthProvider = ({ children }) => {
@@ -13,7 +15,7 @@ export const AuthProvider = ({ children }) => {
     });
   }, []);
   if (loading) {
-    return <p>Loading...</p>;
+    return <Spinner />;
   }
   return (
     <AuthContext.Provider value={{ currentUser }}>
