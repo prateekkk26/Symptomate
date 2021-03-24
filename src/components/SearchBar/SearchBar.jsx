@@ -31,8 +31,8 @@ const SearchBar = (props) => {
             <div className="" style={{ width: '100%' }}>
                 <AutoComplete
                     className="certain-category-search"
-                    allowClear
                     dropdownClassName="certain-category-search-dropdown"
+                    allowClear
                     dropdownMatchSelectWidth={false}
                     dropdownStyle={{ width: 200 }}
                     size="large"

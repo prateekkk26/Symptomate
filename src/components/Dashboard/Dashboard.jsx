@@ -17,6 +17,7 @@ class Dashboard extends React.Component {
 
   componentDidMount() {
     ReactGA.pageview(window.location.pathname + window.location.search);
+    this.getSymptoms();
   }
 
 	customStyles = {
@@ -135,6 +136,7 @@ class Dashboard extends React.Component {
     this.setState({
       age: event.target.value
     })
+    console.log(this.state.symptoms)
   }
 
 
@@ -149,7 +151,7 @@ class Dashboard extends React.Component {
               {
                 this.state.evidence.length !== 0 ? <Conditions symptoms={this.state.symptoms} conditions={this.state.conditions} /> : null
               }
-              
+              {/*<UI symptoms={this.state.symptoms} selected={this.symptomSelected}/>*/}
               <Modal
                   isOpen={this.state.modalIsOpen}
                   onRequestClose={this.closeModal}

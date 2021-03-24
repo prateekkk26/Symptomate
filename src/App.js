@@ -6,6 +6,7 @@ import Homepage from './components/Homepage/Homepage'
 import Login from './components/Login/Login'
 import Signup from './components/Signup/Signup'
 import Dashboard from './components/Dashboard/Dashboard'
+import Diseases from './components/Diseases/Diseases'
 import error from './components/404/error'
 import { AuthProvider } from './components/Auth'
 import ReactGA from 'react-ga'
@@ -22,6 +23,7 @@ const App = () => {
     			<Route exact path="/login" component={Login} />
     			<Route exact path="/signup" component={Signup} />
           <Route exact path="/analyze" component={Dashboard} />
+          <Route exact path="/diseases" component={Diseases} />
           <Route path="/404" component={error} />
         <Redirect to="/404" />
     		</Switch>
