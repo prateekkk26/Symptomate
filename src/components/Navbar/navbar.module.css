@@ -4,7 +4,7 @@
 	height: 6rem;
 	padding: 1rem;
 }
-
+ 
 .cover {
 	max-width: 120rem;
 	margin: 0 auto;
@@ -96,7 +96,7 @@
 }
 
 .block {
-	width: 100%;
+	max-width: 100%;
 	background-color: var(--darkGrey);
 }
 

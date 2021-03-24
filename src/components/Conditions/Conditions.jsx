@@ -14,9 +14,9 @@ const Conditions = (props) => {
 									<h3 className="text-light">{e.name}</h3>
 								</div>
 								<div className={`py-3 px-4 ${styles.info}`}>
-									<p className="display-6"><span>Common Name:</span>&nbsp; &nbsp;{e.common_name}</p>
-									<p className="display-6"><span>Seriousness:</span>&nbsp; &nbsp;{e.seriousness}</p>
-									<p className="display-6"><span>Sex Filter:</span>&nbsp; &nbsp;{e.sex_filter}</p>
+									<p className="h5 my-3"><span>Common Name:</span>&nbsp; &nbsp;{e.common_name}</p>
+									<p className="h5 my-3"><span>Seriousness:</span>&nbsp; &nbsp;{e.seriousness}</p>
+									<p className="h5 my-3"><span>Sex Filter:</span>&nbsp; &nbsp;{e.sex_filter}</p>
 								</div>
 							</div>
 						</div>

@@ -95,9 +95,6 @@
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 767px) {
-	.cover {
-		width: 100rem;
-	}
 	.title {
 		font-size: 4.5rem;
 	}
@@ -106,9 +103,6 @@
 	}
 }
 @media screen and (max-width: 480px) {
-	.cover {
-		width: 70rem;
-	}
 	.title {
 		font-size: 3rem;
 	}
