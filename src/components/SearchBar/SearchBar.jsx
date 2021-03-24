@@ -27,7 +27,7 @@ const SearchBar = (props) => {
     let options = dataSource.map((item,index) => <Option key={item.id} value={item.name} onClick={()=>{props.selected(item,index)}}>{item.name}</Option>)
     return (
         <div>
-            <div className="h2 text-uppercase my-5">Add Symptoms</div>
+            <div className="h2 text-uppercase my-5 font-weight-bold">Add Symptoms</div>
             <div className="" style={{ width: '100%' }}>
                 <AutoComplete
                     className="certain-category-search"

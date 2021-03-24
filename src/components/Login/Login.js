@@ -59,7 +59,7 @@ const Login = () => {
 					<div className="p-5 rounded-lg">
 						<Form onSubmit={handleSubmit}>
 						  <Form.Group controlId="formBasicEmail" className="mb-4">
-						    <Form.Label>Email address</Form.Label>
+						    <Form.Label className="display-6">Email address</Form.Label>
 						    <InputGroup className="mb-3" size="lg">
 							    <InputGroup.Prepend>
 							      <InputGroup.Text id="basic-addon1" className="bg-primary">
@@ -75,13 +75,13 @@ const Login = () => {
 							      aria-describedby="basic-addon1"
 							    />
 							</InputGroup>
-						    <Form.Text className="text-info">
+						    <Form.Text className="text-info display-6">
 						      We'll never share your email with anyone else.
 						    </Form.Text>
 						  </Form.Group>
 
 						  <Form.Group controlId="formBasicPassword" className="mb-4">
-						    <Form.Label>Password</Form.Label>
+						    <Form.Label className="display-6">Password</Form.Label>
 						    <InputGroup className="mb-3" size="lg">
 							    <InputGroup.Prepend>
 							      <InputGroup.Text id="basic-addon1" className="bg-primary">

@@ -6,8 +6,8 @@ const Header = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.cover}>
-				<h1 className={styles.title}>Symptomate</h1>
-				<h3 className={styles.subtitle}>Make your life healthier</h3>
+				<h1 className={`font-weight-bold ${styles.title}`}>Symptomate</h1>
+				<h3 className={`font-weight-bold ${styles.subtitle}`}>Make your life healthier</h3>
 				<Link to="/analyze" className={`px-4 py-3 ${styles.btn} ${styles.btnFull} font-weight-bold`}>Analyze</Link>
 				<a href="www.google.com" className={`px-4 py-3 ${styles.btn} ${styles.btnGhost} font-weight-bold`}>Site Activity</a>
 			</div>

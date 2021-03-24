@@ -144,7 +144,7 @@ class Dashboard extends React.Component {
     return (
         <Layout>
           <div className={`${styles.dashboard}`}>
-            <h1 className={styles.title}>{"analyze".toUpperCase()}</h1>
+            <h1 className={`font-weight-bold ${styles.title}`}>{"analyze".toUpperCase()}</h1>
             <div className={`${styles.dashboardContainer} p-5`}>
               <Info sex={this.state.gender} reset={this.reset} gender={this.state.gender} age={this.state.age} onAgeChanged={this.onAgeChanged} onSexChanged={this.onSexChanged} submit={this.submit} />
               <SearchBar symptoms={this.state.symptoms} selected={this.symptomSelected} />

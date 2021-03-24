@@ -24,11 +24,27 @@ class ApexChart extends React.Component {
             }
           },
           dataLabels: {
-            enabled: true
+            enabled: true,
+            style: {
+              fontSize: "10px"
+            }
           },
           xaxis: {
             categories: this.props.categories,
+            labels: {
+              style: {
+                fontSize: "10px"
+              }
+            },
+            title: {
+              text: `(${this.props.xTitle})`
+            }
           },
+          yaxis: {
+            title: {
+              text: `(${this.props.yTitle})`
+            }
+          }
         },
       
       

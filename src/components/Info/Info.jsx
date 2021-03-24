@@ -6,20 +6,38 @@ const Info = (props) => {
         <div>
             <div className="row">
                 <div className="col col-2">
-                    <Form.Label>Select Gender:</Form.Label>
+                    <Form.Label className="display-6">Select Gender:</Form.Label>
                 </div>
                 <div className="col ml-4">
                     <div>
-                        <Form.Check type="radio" inline checked={props.gender === "male"} onChange={props.onSexChanged} name="gender" value="male" label="Male" />
+                        <Form.Check 
+                            type="radio" 
+                            inline 
+                            checked={props.gender === "male"} 
+                            onChange={props.onSexChanged} 
+                            name="gender" 
+                            value="male" 
+                            label="Male" 
+                            className="display-6"
+                        />
                     </div>
                     <div>
-                        <Form.Check type="radio" inline className="my-2" checked={props.gender === "female"} onChange={props.onSexChanged} name="gender" value="female" label="Female" />
+                        <Form.Check 
+                            type="radio" 
+                            inline 
+                            className="my-2 display-6" 
+                            checked={props.gender === "female"} 
+                            onChange={props.onSexChanged} 
+                            name="gender" 
+                            value="female" 
+                            label="Female" 
+                        />
                     </div>
                 </div>
             </div>
             <div className="row my-5">
                 <div className="col col-2">
-                    <Form.Label>Enter Age:</Form.Label>
+                    <Form.Label className="display-6">Enter Age:</Form.Label>
                 </div>
                 <div className="col ml-4">
                     <Form.Control type="number" onChange={props.onAgeChanged} placeholder="Enter Age" value={props.age} size="lg" />

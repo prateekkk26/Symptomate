@@ -1,6 +1,6 @@
 .container {
 	background-color: var(--mainWhite);
-	width: 100%;
+	max-width: 100%; 
 	height: 6rem;
 	padding: 1rem;
 }
@@ -8,6 +8,7 @@
 .cover {
 	max-width: 120rem;
 	margin: 0 auto;
+	height: auto;
 }
 
 .logo {
@@ -68,6 +69,7 @@
 	border: 1px solid var(--mainRed);
 	transition: color 0.2s, background-color 0.2s;
 	font-weight: bold;
+	margin-right: 0;
 }
 
 .btnGreen:active,
