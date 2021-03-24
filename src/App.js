@@ -24,8 +24,8 @@ const App = () => {
     			<Route exact path="/signup" component={Signup} />
           <Route exact path="/analyze" component={Dashboard} />
           <Route exact path="/diseases" component={Diseases} />
-          <Route path="/404" component={error} />
-        <Redirect to="/404" />
+          <Route component={error} />
+          <Redirect to="/404" />
     		</Switch>
     	</BrowserRouter>
     </AuthProvider>

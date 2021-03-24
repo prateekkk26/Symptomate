@@ -1,51 +1,38 @@
 .container {
-	padding: 2rem;
+	background-color: #4682B4;
+	color: var(--mainWhite);
+	max-width: 100%;
+	border: 1px solid transparent;
 }
 
-.cover {
-	max-width: 114rem;
-	margin: 5rem auto;
+.error {
+	max-width: 120rem;
+	margin: 6rem auto;
 	text-align: center;
-	background-image: linear-gradient(rgba(255,255,255,0.8), rgba(0,0,0,0.8)), url('../../img/error.webp');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	padding: 4rem;
-	box-shadow: 1rem 2rem 0.5rem var(--mainBlack);
+	padding: 1rem;
 }
 
-.cover h1 {
-	font-size: 13rem;
+.title {
+	font-size: 16rem;
+	text-align: center;
+	text-shadow: 5px 10px 7px #000;
 }
 
-.cover h3 {
-	font-size: 8rem;
-	text-transform: uppercase;
+.subLine {
+	font-size: 4rem;
 }
 
-@media screen and (max-width: 767px) {
-	.cover h1 {
-		font-size: 11rem;
-	}
-	.cover h3 {
-		font-size: 6rem;
-	}
+.btn {
+	padding: 1.5rem;
+	display: inline-block;
+	color: var(--mainWhite);
+	border: 1px solid var(--mainWhite);
+	transition: all 0.5s ease-in-out;
+	margin-top: 1rem;
 }
 
-@media screen and (max-width: 480px) {
-	.cover h1 {
-		font-size: 9rem;
-	}
-	.cover h3 {
-		font-size: 4rem;
-	}
-}
-
-@media screen and (max-width: 300px) {
-	.cover h1 {
-		font-size: 5rem;
-	}
-	.cover h3 {
-		font-size: 3rem;
-	}
+.btn:hover,
+.btn:active {
+	background-color: var(--mainWhite);
+	color: var(--mainBlack);
 }
