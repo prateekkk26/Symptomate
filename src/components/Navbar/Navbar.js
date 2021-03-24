@@ -19,7 +19,7 @@ const Navbar = () => {
 						<li className={styles.toggle} onClick={() => setActive(!active)}>
 							<ion-icon name="menu"></ion-icon>
 						</li>
-						<li className={styles.navLink}><Link to="/home">Home</Link></li>	
+						<li className={styles.navLink}><Link to="/">Home</Link></li>	
 						<li className={styles.navLink}><Link to="/analyze">Analyze</Link></li>
 						<li className={styles.navLink}><Link to="/diseases">Diseases</Link></li>
 						{
