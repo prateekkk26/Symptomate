@@ -9,11 +9,9 @@ import Dashboard from './components/Dashboard/Dashboard'
 import Diseases from './components/Diseases/Diseases'
 import error from './components/404/error'
 import { AuthProvider } from './components/Auth'
-import ReactGA from 'react-ga'
+import GA from './components/GA/GA'
 
 const App = () => {
-
-  ReactGA.initialize('UA-192431574-1');
 
   return (
       <AuthProvider>
@@ -24,6 +22,7 @@ const App = () => {
     			<Route exact path="/signup" component={Signup} />
           <Route exact path="/analyze" component={Dashboard} />
           <Route exact path="/diseases" component={Diseases} />
+          <Route exact path="/site-activity" component={GA} />
           <Route component={error} />
           <Redirect to="/404" />
     		</Switch>

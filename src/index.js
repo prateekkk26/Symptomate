@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import ReactGA from 'react-ga'
 
 ReactDOM.render(
   <React.StrictMode>
+  	ReactGA.initialize('UA-192431574-1');
     <App />
   </React.StrictMode>,
   document.getElementById('root')
