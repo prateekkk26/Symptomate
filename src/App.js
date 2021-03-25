@@ -10,8 +10,11 @@ import Diseases from './components/Diseases/Diseases'
 import error from './components/404/error'
 import { AuthProvider } from './components/Auth'
 import GA from './components/GA/GA'
+import ReactGA from 'react-ga'
 
 const App = () => {
+
+  ReactGA.initialize('UA-192431574-1');
 
   return (
       <AuthProvider>
