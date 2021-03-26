@@ -1,24 +1,6 @@
-.container h2 {
-	text-align: center;
-	font-size: 3rem;
-	margin-top: 4rem;
-	text-transform: uppercase;
-	word-spacing: 0.5rem;
-	font-weight: bold;
-}
-
-.container h2:after {
-	content: " ";
-	display: block;
-	max-width: 5rem;
-	height: 0.2rem;
-	background-color: var(--mainBlue);
-	margin: 2rem auto;
-}
-
 .chart {
 	max-width: 100rem;
-	margin: 3rem auto;
+	margin: 4rem auto;
 	padding: 1rem;
 }
 

@@ -6,6 +6,7 @@ import { signInWithGoogle} from '../../config/firebase';
 import styles from './login.module.css'
 import {Form, InputGroup, FormControl, Button} from 'react-bootstrap'
 import ReactGA from 'react-ga'
+import img from '../../img/login.webp' 
 
 import Layout from '../Layout/Layout'
 
@@ -26,7 +27,7 @@ const Login = () => {
 	      	action: "Clicked the log in button"
 	      })
 	    } catch (err) {
-	      alert(err);
+	      console.log(err.code);
 	    }
 	};
 
@@ -49,7 +50,7 @@ const Login = () => {
 				<div className={`${styles.container} p-5`}>
 					<div>
 						<img 
-							src="https://cdn.pixabay.com/photo/2013/07/18/10/55/dna-163466__340.jpg" 
+							src={img} 
 							alt="login-background"
 							className={`${styles.image} rounded-lg `} 
 						/>
@@ -75,7 +76,7 @@ const Login = () => {
 							      aria-describedby="basic-addon1"
 							    />
 							</InputGroup>
-						    <Form.Text className="text-info h4">
+						    <Form.Text className="text-info h5">
 						      We'll never share your email with anyone else.
 						    </Form.Text>
 						  </Form.Group>

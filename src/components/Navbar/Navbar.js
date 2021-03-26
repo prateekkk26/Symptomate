@@ -38,9 +38,9 @@ const Navbar = () => {
 						<li className={`${styles.blockLink}`}><Link to="/diseases">Diseases</Link></li>
 						<li className={`${styles.blockLink}`}>
 							{
-								currentUser ? <a href="www.google.com" className={`${styles.blockBtn} ${styles.blockBtnGreen}`} onClick={() => fire.auth().signOut()}>
+								currentUser ? <Link to="/login" className={`${styles.blockBtn} ${styles.blockBtnGreen}`} onClick={() => fire.auth().signOut()}>
 									Log Out
-									</a>
+									</Link>
 									: <Link to="/login" className={`${styles.blockBtn} ${styles.blockBtnGreen}`}>Log in</Link>
 							}
 						</li>

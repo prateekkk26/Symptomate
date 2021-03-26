@@ -1,4 +1,18 @@
 .chart {
-	max-width: 80rem;
-	margin: 1rem auto;
+	margin: 1rem 0;
+}
+
+.result {
+	font-size: 3rem;
+}
+
+.result span {
+	text-shadow: 2px 5px 7px var(--mainBlue);
+	font-weight: bold;
+}
+
+.link {
+	background-color: var(--mainBlack);
+	padding: 1rem;
+	color: var(--mainWhite);
 }

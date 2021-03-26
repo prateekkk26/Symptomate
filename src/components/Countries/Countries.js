@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import {Bar} from 'react-chartjs-2';
 import styles from './countries.module.css'
 
+import ApexChart from '../ApexChart/ApexChart'
+
 import {data} from './data'
 
 class Countries extends Component {
@@ -27,31 +29,15 @@ class Countries extends Component {
 		}
 		return (
 			<div className={styles.container}>
-				<h2>Health care index of countries</h2>
 				<div className={styles.chart}>
-					<Bar
-			          data={state}
-			          options={{
-			            title:{
-			              display:false,
-			              text:'Health care index of countries',
-			              fontSize:15
-			            },
-			            responsive: true,
-			            legend:{
-			              display:true,
-			              position:'top',
-			              fontSize: 8
-			            },
-			            label: {
-			            	fontColor: 'rgba(255,255,255,1)',
-			            },
-			            scales: {
-			            	yAxes: [{ticks: {fontSize: 10, fontColor: 'rgba(0,0,137,1'}}],
-			            	xAxes: [{ticks: {fontSize: 10, fontColor: 'rgba(0,0,137,1'}}],
-			            }
-			          }}
-			        />
+					<ApexChart 
+						type="line"
+						title="Health care index of countries"
+						xTitle="Countries"
+						yTitle="Healthcare Index"
+						categories={countryName}
+						data={healthIndex}
+					/>
 				</div>
 			</div>
 		)

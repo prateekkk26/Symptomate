@@ -28,6 +28,7 @@ const SearchBar = (props) => {
     return (
         <div>
             <div className="h2 text-uppercase my-5 font-weight-bold">Add Symptoms</div>
+            <p className="text-primary">Select the symptoms and then click the submit button</p>
             <div className="" style={{ width: '100%' }}>
                 <AutoComplete
                     className="certain-category-search"
@@ -36,7 +37,7 @@ const SearchBar = (props) => {
                     dropdownMatchSelectWidth={false}
                     dropdownStyle={{ width: 200 }}
                     size="large"
-                    style={{ width: '100%' }}
+                    style={{ width: '100%', marginBottom: "20px" }}
                     dataSource={options}
                     placeholder="Search Symptoms"
                     optionLabelProp="value"

@@ -1,0 +1,19 @@
+.analytics-dashboard {
+	background-color: var(--mainWhite);
+	color: var(--mainBlack);
+	max-width: 120rem;
+	margin: 4rem auto;
+}
+
+.gapi-view-selector-container,
+.analytics-auth-widgets {
+	padding: 1.3rem;
+}
+
+.analytics-auth-widgets .analytics-sign-out-button{
+	padding: 0.6rem;
+	color: var(--mainBlack);
+	margin-top: 1rem;
+	border: none;
+}
+

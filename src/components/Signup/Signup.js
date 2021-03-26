@@ -6,6 +6,7 @@ import { signInWithGoogle} from '../../config/firebase';
 import styles from './signup.module.css'
 import ReactGA from 'react-ga'
 import Layout from '../Layout/Layout'
+import img from '../../img/signup.webp'
 
 
 const Signup = () => {
@@ -35,7 +36,7 @@ const Signup = () => {
 				<div className={`${styles.container} p-5`}>
 					<div>
 						<img 
-							src="https://cdn.pixabay.com/photo/2016/11/30/12/17/cells-1872666__340.jpg" 
+							src={img}
 							alt="signup-background"
 							className={`${styles.image} rounded-lg `} 
 						/>
@@ -61,7 +62,7 @@ const Signup = () => {
 							      aria-describedby="basic-addon1"
 							    />
 							</InputGroup>
-						    <Form.Text className="text-info h4">
+						    <Form.Text className="text-info h5">
 						      We'll never share your email with anyone else.
 						    </Form.Text>
 						  </Form.Group>

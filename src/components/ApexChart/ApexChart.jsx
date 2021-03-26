@@ -8,19 +8,24 @@ class ApexChart extends React.Component {
       super(props);
 
       this.state = {
-      
         series: [{
           data: this.props.data
         }],
         options: {
           chart: {
             type: `${this.props.type}`,
-            height: 400
+            height: 400,
+          },
+          title: {
+            text: `${this.props.title}`,
+            style: {
+              fontSize: "12px"
+            }
           },
           plotOptions: {
             bar: {
               borderRadius: 4,
-              horizontal: true,
+              horizontal: this.props.horizontal ? false : true,
             }
           },
           dataLabels: {
@@ -37,12 +42,15 @@ class ApexChart extends React.Component {
               }
             },
             title: {
-              text: `(${this.props.xTitle})`
+              text: `${this.props.xTitle ? this.props.xTitle : ""}`
             }
           },
           yaxis: {
             title: {
-              text: `(${this.props.yTitle})`
+              text: `${this.props.yTitle ? this.props.yTitle : ""}`
+            },
+            style: {
+              fontSize: "2px"
             }
           }
         },
@@ -54,7 +62,6 @@ class ApexChart extends React.Component {
     render() {
       return(
         <div id="chart" className={`font-weight-bold ${styles.apexChart}`}>
-          <p className="h1 my-5 text-left">{this.props.title}</p>
         <Chart options={this.state.options} series={this.state.series} type={this.props.type} height={400} />
       </div>
       )

@@ -10,7 +10,7 @@ function Popup(props) {
                 <div className={`h4 text-primary`}>{data.name}</div>
                 {
                     props.data.question.items[index].choices.map((option, i) =>
-                        <Button key={i} variant="outline-info" onClick={() => {props.click(option.id, props.data.question.items[index].id)}} className={`mr-3 my-2 btn-lg ${styles.choice}`}>
+                        <Button key={i} variant="outline-primary" onClick={() => {props.click(option.id, props.data.question.items[index].id)}} className={`mr-3 my-2 btn-lg ${styles.choice}`}>
                             {option.label}
                         </Button>
                   )
@@ -27,7 +27,6 @@ function Popup(props) {
                 <button className="btn btn-outline-danger ml-auto" onClick={props.closeModal}>X</button>
             </div>
             <div>
-                {/*<div className="h2">You are diagnosed with:</div>*/}
                 <Visualize diseases={props.data.conditions} />
             </div>
             <div className="h2 mt-5">
