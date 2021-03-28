@@ -4,12 +4,29 @@ import Chart from 'react-apexcharts'
 import styles from './apexChart.module.css'
 
 class ApexChart extends React.Component {
+
+    componentDidMount() {
+      this.dataExtract();
+      console.log(this.props.data[0])
+    }
+
+    dataExtract() {
+      const data = this.props.data[0]
+      for(var key in data) {
+        let value = data[key]
+        this.countryName.push(key);
+        this.dataValue.push(value)
+      }
+    }
+
     constructor(props) {
       super(props);
-
+      this.countryName = []
+      this.dataValue = []
+      this.dataExtract = this.dataExtract.bind(this)
       this.state = {
         series: [{
-          data: this.props.data
+          data: this.dataValue
         }],
         options: {
           chart: {
@@ -35,7 +52,7 @@ class ApexChart extends React.Component {
             }
           },
           xaxis: {
-            categories: this.props.categories,
+            categories: this.countryName,
             labels: {
               style: {
                 fontSize: "10px"
@@ -54,8 +71,6 @@ class ApexChart extends React.Component {
             }
           }
         },
-      
-      
       };
     }
 

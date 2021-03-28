@@ -1,5 +1,12 @@
+.navbar {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	background-color: rgba(255,255,255, 0.7);
+}
+
 .container {
-	background-color: var(--mainWhite);
 	max-width: 100%; 
 	height: 6rem;
 	padding: 1rem;
@@ -97,19 +104,30 @@
 
 .block {
 	max-width: 100%;
+	height: 92vh;
 	background-color: var(--darkGrey);
 }
 
 .blockList {
-	margin: 0 auto;
-	text-align: center;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	/*margin: 0 auto;
+	text-align: center;*/
 	list-style-type: none;
 	font-size: 1.5rem;
-	padding: 1rem;
+	/*padding: 1rem;*/
 }
 
 .blockLink {
-	padding: 1.5rem;
+	/*padding: 1.5rem;*/
+	max-width: 100%;
+	padding: 10px 20px 10px 0;
+}
+
+.blockLink:hover,
+.blockLink:active {
+	background-color: var(--mainBlue);
 }
 
 /*.blockLink:after {

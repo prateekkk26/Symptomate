@@ -1,4 +1,4 @@
-import React, {useState, useContext} from 'react'
+import React, {useState,useEffect, useContext} from 'react'
 import {Link} from 'react-router-dom'
 import styles from './navbar.module.css'
 
@@ -9,10 +9,12 @@ import { AuthContext } from '../Auth'
 const Navbar = () => {
 	const [active, setActive] = useState(false)
 	const { currentUser } = useContext(AuthContext)
+	const [navbar, setNavbar] = useState(false)
+
 
 	return (
-		<div>
-			<nav className={styles.container}>
+		<div className={`${styles.navbar}`}>
+			<nav className={`${styles.container}`}>
 				<div className={styles.cover}>
 					<Link to="/"><img src={logo} alt="Symptomate Logo" className={styles.logo} /></Link>
 					<ul className={styles.navList}>

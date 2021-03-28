@@ -12,7 +12,13 @@
 }
 
 .link {
-	background-color: var(--mainBlack);
+	background-color: var(--mainBlue);
 	padding: 1rem;
 	color: var(--mainWhite);
+}
+
+.link:hover,
+.link:active {
+	color: var(--mainWhite);
+	opacity: 0.9;
 }

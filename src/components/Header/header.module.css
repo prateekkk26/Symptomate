@@ -17,7 +17,7 @@
 	letter-spacing: 0.5rem;
 	text-transform: uppercase;
 	margin-bottom: 2.5rem;
-	color: var(--mainBlack);
+	color: var(--mainWhite);
 	animation: moveInRight 1s ease-out;
 }
 
@@ -25,7 +25,7 @@
 	font-size: 2rem;
 	letter-spacing: 0.2rem;
 	margin-bottom: 4.5rem;
-	color: var(--mainBlack);
+	color: var(--mainWhite);
 	animation: moveInLeft 1s ease-out;
 	text-transform: uppercase;
 }
