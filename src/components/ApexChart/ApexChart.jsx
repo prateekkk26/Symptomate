@@ -6,24 +6,23 @@ import styles from './apexChart.module.css'
 class ApexChart extends React.Component {
 
     componentDidMount() {
-      this.dataExtract();
-      console.log(this.props.data[0])
+      this.getData()
     }
 
-    dataExtract() {
-      const data = this.props.data[0]
-      for(var key in data) {
-        let value = data[key]
-        this.countryName.push(key);
-        this.dataValue.push(value)
+    getData() {
+      let data = this.props.data
+      for(const country in data) {
+        this.countryName.push(country)
+        this.dataValue.push(data[country])
       }
+      console.log(this.countryName, this.dataValue)
     }
 
     constructor(props) {
       super(props);
       this.countryName = []
       this.dataValue = []
-      this.dataExtract = this.dataExtract.bind(this)
+      this.getData = this.getData.bind(this)
       this.state = {
         series: [{
           data: this.dataValue
@@ -77,8 +76,8 @@ class ApexChart extends React.Component {
     render() {
       return(
         <div id="chart" className={`font-weight-bold ${styles.apexChart}`}>
-        <Chart options={this.state.options} series={this.state.series} type={this.props.type} height={400} />
-      </div>
+          <Chart options={this.state.options} series={this.state.series} type={this.props.type} height={400} />
+        </div>
       )
     }
 }

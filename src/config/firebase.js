@@ -19,5 +19,6 @@ provider.setCustomParameters({ prompt: 'select_account' });
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
 export const db = firebase.firestore();
+db.settings({ timestampsInSnapshots: true});
 
 export default fire;

@@ -12,18 +12,7 @@ class Visualize extends Component {
 			diseases.map(disease => diseaseName.push(disease.common_name))
 			diseases.map(disease => diseaseProbability.push(parseFloat(disease.probability*100).toFixed(1)))
 		}
-		const state = {
-		  labels: diseaseName,
-		  datasets: [
-		    {
-		      label: 'Probability of disease',
-		      borderColor: '#007bff',
-		      hoverBackgroundColor: '#007bff',
-		      borderWidth: 2,
-		      data: diseaseProbability
-		    }
-		  ]
-		}
+		
 		return (
 			<div className={styles.container}>
 				<div className={styles.chart}>

@@ -14,60 +14,79 @@ const Diseases = () => {
 
 	useEffect(() => {
 	    ReactGA.pageview(window.location.pathname + window.location.search);
-	    fetchCoronaData()
-	    fetchEbolaData()
-	    fetchMalariaData()
-
+	    fetchAll()
 	}, []);
 
-	const fetchCoronaData=async()=>{
-	    const response=db.collection('corona');
-	    const data=await response.get();
-	    data.docs.forEach(item=>{
-	     	setCoronaData([...corona,item.data()])
-	    })
+	const fetchAll = () => {
+		fetchCoronaData()
+	    fetchMalariaData()
+	    fetchEbolaData()
 	}
 
-	const fetchEbolaData=async()=>{
-	    const response=db.collection('ebola');
-	    const data=await response.get();
-	    data.docs.forEach(item=>{
-	     	setEbolaData([...ebola,item.data()])
-	    })
+	const fetchCoronaData=()=>{
+	    db.collection('corona').get().then((snapshot) => {
+
+	      snapshot.docs.forEach(doc => {
+	          let items = doc.data();
+	          /* Make data suitable for rendering */
+	          // items = JSON.stringify(items);
+	          /* Update the components state with query result */
+	          setCoronaData(items) 
+	      });
+	    });
 	}
 
-	const fetchMalariaData=async()=>{
-	    const response=db.collection('malaria');
-	    const data=await response.get();
-	    data.docs.forEach(item=>{
-	     	setMalariaData([...malaria,item.data()])
-	    })
+	const fetchEbolaData=()=>{
+	    db.collection('ebola').get().then((snapshot) => {
+
+	      snapshot.docs.forEach(doc => {
+	          let items = doc.data();
+	          /* Make data suitable for rendering */
+	          // items = JSON.stringify(items);
+	          /* Update the components state with query result */
+	          setEbolaData(items) 
+	      });
+	    });
+	}
+
+	const fetchMalariaData=()=>{
+	    db.collection('malaria').get().then((snapshot) => {
+
+	      snapshot.docs.forEach(doc => {
+	          let items = doc.data();
+	          /* Make data suitable for rendering */
+	          // items = JSON.stringify(items);
+	          /* Update the components state with query result */
+	          setMalariaData(items) 
+	      });
+	    });
 	}
 
 	return (
 		<Layout>
 			<div className={styles.diseases}>
-				<ApexChart
+				{corona.length!=0 ? <ApexChart
 					type="bar"
 					title="Top 10 countries affected by Corona Virus"
 					xTitle="Number of reported cases" 
 					yTitle="Countries"
 					data={corona}
-				/>
-				<ApexChart
-					type="line"
-					title="Western African Ebola virus epidemic (2013-2016)"
-					xTitle="Countries"
-					yTitle="Number of reported cases"
-					data={ebola}
-				/>
-				<ApexChart
+				/> : <p>Loading</p>}
+				{malaria.length!=0 ? <ApexChart
 					type="line" 
 					title='Top 10 countries affected by Malaria'
 					xTitle="Countries"
 					yTitle="Number of reported cases in millions"
 					data={malaria}
-				/>
+				/> : <p>Loading</p>}
+				{ebola.length!=0 ? <ApexChart
+					type="line"
+					title="Western African Ebola virus epidemic (2013-2016)"
+					xTitle="Countries"
+					yTitle="Number of reported cases"
+					data={ebola}
+				/> : <p>Loading</p>}
+				
 			</div>
 		</Layout>
 	)

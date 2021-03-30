@@ -28,7 +28,7 @@ const SearchBar = (props) => {
     return (
         <div>
             <div className="h2 text-uppercase my-5 font-weight-bold">Add Symptoms</div>
-            <p className="text-primary">Select the symptoms and then click the submit button</p>
+            <p className="text-primary h4">Select the symptoms and then click the submit button</p>
             <div className="" style={{ width: '100%' }}>
                 <AutoComplete
                     className="certain-category-search"

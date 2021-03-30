@@ -27,7 +27,7 @@ const App = () => {
           <Route exact path="/diseases" component={Diseases} />
           <Route exact path="/site-activity" component={GA} />
           <Route component={error} />
-          <Redirect to="/404" />
+          {/*<Redirect to="/404" />*/}
     		</Switch>
     	</BrowserRouter>
     </AuthProvider>
