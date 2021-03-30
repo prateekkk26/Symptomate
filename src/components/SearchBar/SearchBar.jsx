@@ -1,14 +1,15 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './searchbar.css'
 import { Icon, Input, AutoComplete } from 'antd';
 
 const { Option} = AutoComplete;
 const SearchBar = (props) => {
+
     const [dataSource, changeSource] = useState(props.symptoms)
     const handleSearch = (e) => {
         // let new_symptoms = props.symptoms.filter((s) => (s.name.toLowerCase().includes(e)));
         // changeSource(new_symptoms);
-
+        console.log(`search ${e}`)
         let new_symptoms = [];
         let arrayToString = JSON.stringify(Object.assign({}, props.symptoms))
         let stringToObject = JSON.parse(arrayToString)
@@ -20,7 +21,20 @@ const SearchBar = (props) => {
             }
         }
         changeSource(new_symptoms)
+    }
 
+    const handleChange = (e) => {
+        let new_symptoms = []    
+        let arrayToString = JSON.stringify(Object.assign({}, props.symptoms))
+        let stringToObject = JSON.parse(arrayToString)
+        for(var key in stringToObject) {
+            if(stringToObject.hasOwnProperty(key)) {
+                var val = stringToObject[key];
+                if(val.name.toLowerCase().includes(e))
+                    new_symptoms.push(val);
+            }
+        }
+        changeSource(new_symptoms)
     }
 
 
@@ -41,7 +55,7 @@ const SearchBar = (props) => {
                     dataSource={options}
                     placeholder="Search Symptoms"
                     optionLabelProp="value"
-                    onSearch={handleSearch}
+                    onChange={handleChange}
                     autoFocus={false}
                     backfill={false}
                 >
