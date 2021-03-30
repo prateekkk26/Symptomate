@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import styles from './visualize.module.css'
+import styles from './visualize.module.css' 
 
 import ApexChart from '../ApexChart/ApexChart'
 
@@ -21,7 +21,7 @@ class Visualize extends Component {
 						title="List of Diagnosed diseases with their probabilities"
 						horizontal
 						categories={diseaseName}
-						data={diseaseProbability}
+						values={diseaseProbability}
 					/>
 					<div>
 						<p className={`${styles.result}`}>

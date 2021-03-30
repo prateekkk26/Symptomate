@@ -3,7 +3,7 @@ import Layout from '../Layout/Layout'
 import ApexChart from '../ApexChart/ApexChart'
 import ReactGA from 'react-ga'
 import styles from './diseases.module.css'
-
+import Loading from '../Loading/Loading'
 import {db} from '../../config/firebase'
 
 const Diseases = () => {
@@ -65,27 +65,31 @@ const Diseases = () => {
 	return (
 		<Layout>
 			<div className={styles.diseases}>
-				{corona.length!=0 ? <ApexChart
+				{malaria.length!==0 ? <ApexChart
+					type="bar" 
+					title='Top 10 countries affected by Malaria'
+					xTitle="Countries"
+					horizontal
+					yTitle="Number of reported cases in millions"
+					data={malaria}
+				/> : <Loading />}
+
+				{corona.length!==0 ? <ApexChart
 					type="bar"
 					title="Top 10 countries affected by Corona Virus"
 					xTitle="Number of reported cases" 
 					yTitle="Countries"
 					data={corona}
-				/> : <p>Loading</p>}
-				{malaria.length!=0 ? <ApexChart
-					type="line" 
-					title='Top 10 countries affected by Malaria'
-					xTitle="Countries"
-					yTitle="Number of reported cases in millions"
-					data={malaria}
-				/> : <p>Loading</p>}
-				{ebola.length!=0 ? <ApexChart
-					type="line"
+				/> : <Loading />}
+
+				{ebola.length!==0 ? <ApexChart
+					type="bar"
 					title="Western African Ebola virus epidemic (2013-2016)"
 					xTitle="Countries"
 					yTitle="Number of reported cases"
+					horizontal
 					data={ebola}
-				/> : <p>Loading</p>}
+				/> : <Loading />}
 				
 			</div>
 		</Layout>

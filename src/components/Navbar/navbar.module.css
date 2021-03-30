@@ -109,20 +109,21 @@
 }
 
 .blockList {
-	width: 100%;
+	max-width: 120rem;
+	height:60vh;
 	display: flex;
 	flex-direction: column;
-	/*margin: 0 auto;
-	text-align: center;*/
+	margin: 2rem auto;
 	list-style-type: none;
-	font-size: 1.5rem;
-	/*padding: 1rem;*/
+	justify-content: space-between;
+	font-size: 2.5rem;
 }
 
 .blockLink {
 	/*padding: 1.5rem;*/
 	max-width: 100%;
 	padding: 10px 20px 10px 0;
+	text-shadow: 0 0 10px var(--mainBlue);
 }
 
 .blockLink:hover,

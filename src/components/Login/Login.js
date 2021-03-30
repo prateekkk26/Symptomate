@@ -100,10 +100,22 @@ const Login = () => {
 							</InputGroup>
 						  </Form.Group>
 						  <div>
-						  	<Button type="submit" variant="outline-success" size="lg" className="mr-4 mt-4 font-weight-bold">
+						  	<Button 
+						  		type="submit" 
+						  		variant="outline-success" 
+						  		size="lg" 
+						  		className="mr-4 mt-4 font-weight-bold"
+						  		style={{width: "100%"}}
+						  	>
 							    Log In
 							</Button>
-							<Button variant="outline-danger" size="lg" onClick={handleOnClick} className="mt-4 font-weight-bold">
+							<Button 
+								variant="outline-danger" 
+								size="lg" 
+								onClick={handleOnClick} 
+								className="mt-4 font-weight-bold"
+								style={{width: "100%"}}
+							>
 							    Log In with Google
 							</Button>
 						  </div>

@@ -2,8 +2,8 @@ import React, {Component} from 'react'
 import styles from './countries.module.css'
 
 import ApexChart from '../ApexChart/ApexChart'
+import Loading from '../Loading/Loading'
 import {db} from '../../config/firebase'
-import {data} from './data'
 
 class Countries extends Component {
 
@@ -37,12 +37,11 @@ class Countries extends Component {
 			<div className={styles.container}>
 				<div className={styles.chart}>
 					{this.state.healthData.length!=0 ? <ApexChart 
-						type="line"
+						type="bar"
 						title="Health care index of countries"
-						xTitle="Countries"
-						yTitle="Healthcare Index"
+						horizontal
 						data={this.state.healthData}
-					/> : <p>Loading</p>}
+					/> : <Loading />}
 				</div>
 			</div>
 		)

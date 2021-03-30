@@ -1,4 +1,4 @@
-import React, {useState,useEffect, useContext} from 'react'
+import React, {useState, useContext} from 'react'
 import {Link} from 'react-router-dom'
 import styles from './navbar.module.css'
 
@@ -9,7 +9,6 @@ import { AuthContext } from '../Auth'
 const Navbar = () => {
 	const [active, setActive] = useState(false)
 	const { currentUser } = useContext(AuthContext)
-	const [navbar, setNavbar] = useState(false)
 
 
 	return (

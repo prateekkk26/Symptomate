@@ -7,12 +7,11 @@ import {
 	ActiveUsersChart,
 	SessionsByDeviceCategoryChart,
 	PageViewsPerPathChart,
-	SessionDurationChart,
 	SessionsByUserTypeChart,
 	SessionsBySourceChart,
 	SessionsByHourChart
 } from "react-analytics-charts";
-
+import Loading from '../Loading/Loading'
 import ReactGA from 'react-ga'
 import Layout from '../Layout/Layout'
 
@@ -24,10 +23,7 @@ const GA = (props) => {
 	    ReactGA.pageview(window.location.pathname + window.location.search);
 	}, []);
 
-	return (
-		<Layout>
-			<div className="p-1 bg-light">
-				<AnalyticsDashboard
+	let component = <AnalyticsDashboard
 				  authOptions={{ clientId: "433282736531-imqoc45og8qd4v7vu58vqar8udj1qsdn.apps.googleusercontent.com" }}
 				  renderCharts={(gapi, viewId) => {
 				    const chartStyles = {
@@ -74,6 +70,17 @@ const GA = (props) => {
 				    );
 				  }}
 				/>
+
+	return (
+		<Layout>
+			<div className="p-4 bg-light">
+				<div 
+					className="font-weight-bold my-4"
+					style={{maxWidth: "120rem", margin: "1rem auto", fontSize: "4rem"}}	
+				>
+					{"Site Analytics Dashboard".toUpperCase()}
+				</div>
+				{component ? component : <Loading />}
 			</div>
 		</Layout>
 	)
