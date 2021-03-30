@@ -43,6 +43,10 @@
 	margin-bottom: 3rem;
 }
 
+.icons a:hover {
+	color: var(--mainBlue);
+}
+
 ion-icon:first-child,
 ion-icon:nth-child(2),
 ion-icon:nth-child(3),
