@@ -22,7 +22,7 @@ function Popup(props) {
     // )
 
     return (
-        <div className="container" style={{zIndex: 5000}}>
+        <div className="container" style={{zIndex: 500}}>
             <div className="row justify-content-end">
                 <button className="btn btn-outline-danger ml-auto" onClick={props.closeModal}>X</button>
             </div>

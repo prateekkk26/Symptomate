@@ -35,7 +35,7 @@
 	width: 100%;
 	margin: 0;
 	overflow: hidden;
-	background-color: var(--ightGrey);
+	background-color: var(--lightGrey);
 }
 .doctorPhoto img {
 	opacity: 0.8;

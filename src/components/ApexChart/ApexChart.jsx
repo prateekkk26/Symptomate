@@ -41,6 +41,9 @@ class ApexChart extends React.Component {
             height: 500,
             zoom: {
               enabled: true
+            },
+            style: {
+              zIndex: 0
             }
           },
           stroke: {

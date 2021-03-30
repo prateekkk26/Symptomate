@@ -33,7 +33,8 @@ class Dashboard extends React.Component {
 	      transform: 'translate(-50%, -50%)',
         borderRadius: "5px",
         boxShadow: `0 0 5px var(--mainWhite)`,
-        padding: "5px" 
+        paddingRight: "7px",
+        zIndex: 7000 
     	}
   	};
 
