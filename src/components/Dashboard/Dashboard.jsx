@@ -27,12 +27,13 @@ class Dashboard extends React.Component {
 	    content : {
 	      backgroundColor : 'rgba(240, 240, 240, .95)',
 	      minHeight : '90%',
-	      minWidth: '90%',
+	      minWidth: '95%',
 	      top: '50%',
 	      left: '50%',
 	      transform: 'translate(-50%, -50%)',
         borderRadius: "5px",
         boxShadow: `0 0 5px var(--mainWhite)`,
+        padding: "5px" 
     	}
   	};
 

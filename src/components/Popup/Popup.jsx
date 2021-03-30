@@ -14,7 +14,7 @@ function Popup(props) {
                             {option.label}
                         </Button>
                   )
-                }
+                } 
             </div>
     )
     // let conditions = props.data.conditions.map((data, index)=>

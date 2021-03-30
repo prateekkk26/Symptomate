@@ -18,7 +18,8 @@ class Visualize extends Component {
 				<div className={styles.chart}>
 					<ApexChart 
 						type="bar"
-						title="List of Diagnosed diseases with their probabilities"
+						title="Diagnosed diseases"
+						yTitle="Probabilities"
 						horizontal
 						categories={diseaseName}
 						values={diseaseProbability}
