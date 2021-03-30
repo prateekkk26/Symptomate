@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import {Redirect, BrowserRouter, Switch, Route} from 'react-router-dom'
 import './App.css';
 
 import Homepage from './components/Homepage/Homepage'
@@ -27,7 +27,7 @@ const App = () => {
           <Route exact path="/diseases" component={Diseases} />
           <Route exact path="/site-activity" component={GA} />
           <Route component={error} />
-          {/*<Redirect to="/404" />*/}
+          <Redirect to="/" />
     		</Switch>
     	</BrowserRouter>
     </AuthProvider>

@@ -24,6 +24,7 @@ const SearchBar = (props) => {
     }
 
     const handleChange = (e) => {
+        console.log(props.symptoms)
         let new_symptoms = []    
         let arrayToString = JSON.stringify(Object.assign({}, props.symptoms))
         let stringToObject = JSON.parse(arrayToString)
@@ -35,6 +36,11 @@ const SearchBar = (props) => {
             }
         }
         changeSource(new_symptoms)
+    }
+
+    const handleFilter = (input, option) => {
+        console.log(`${input} - ${option}`)
+        return option.toLowerCase().includes(input)
     }
 
 
@@ -55,8 +61,8 @@ const SearchBar = (props) => {
                     dataSource={options}
                     placeholder="Search Symptoms"
                     optionLabelProp="value"
-                    onChange={handleChange}
-                    autoFocus={false}
+                    filterOption={true}
+                    autoFocus={true}
                     backfill={false}
                 >
                     <Input suffix={<Icon type="search" className="certain-category-icon" />} />
