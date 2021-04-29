@@ -55,8 +55,8 @@ class Dashboard extends React.Component {
   getSymptoms = ()=>{
     let header = {
       "Accept": "application/json",
-      "App-Key": "aaf3a83db076165d87a716e94f12fc1b",
-      "App-Id" : '04584af7',
+      "App-Key": "fed33202298c66774f91a499d1e30ed7",
+      "App-Id" : '0888f97a',
       "Dev-Mode" : "true"
     };
     axios.get('https://api.infermedica.com/v2/symptoms', {headers: header}).then(res=>{
@@ -79,8 +79,8 @@ class Dashboard extends React.Component {
       let header = {
         "Content-Type": "application/json",
         "Accept": "application/json",
-        "App-Id": "04584af7",
-        "App-Key": "aaf3a83db076165d87a716e94f12fc1b",
+        "App-Key": "fed33202298c66774f91a499d1e30ed7",
+        "App-Id" : '0888f97a',
         "Dev-Mode" : "true"
       }
       axios.post('https://api.infermedica.com/v2/diagnosis', {
@@ -106,8 +106,8 @@ class Dashboard extends React.Component {
     let header = {
       "Content-Type": "application/json",
       "Accept": "application/json",
-      "App-Id": "04584af7",
-      "App-Key": "aaf3a83db076165d87a716e94f12fc1b",
+      "App-Id" : '0888f97a',
+      "App-Key": "fed33202298c66774f91a499d1e30ed7",
       "Dev-Mode" : "true"
     }
     axios.post('https://api.infermedica.com/v2/diagnosis', {
